@@ -1,5 +1,3 @@
-### Post 3: `post-3.md`
-```markdown
 ---
 title: "Introduction to TypeScript"
 author: "Alex Johnson"

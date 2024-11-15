@@ -1,32 +1,37 @@
-interface Post {
-  slug: number;
+import { GetStaticProps, GetStaticPaths } from "next";
+import { getAllPostIds, getPostData } from "../../lib/posts"; // Adjust path based on your project structure
+
+interface PostData {
+  title: string;
+  date: string;
+  contentHtml: string;
 }
 
-interface Params {
-  id: string;
-}
+// redirect to 404 for non-existent static params
+export const dynamicParams = false;
 
-export const dynamicParams = false
-
-export async function generateStaticParams() {
-  const posts: Post[] = [
-    { slug: 1, },
-    { slug: 2, },
-    { slug: 3, },
-    { slug: 4, },
-  ]
-
-  return posts.map((post) => ({
-    id: post.slug.toString(),
-  }))
-}
-
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { id } = await params;
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const postId = (await params).id;
+  const post = await getPostData(postId);
 
   return (
-    <>
-      This is page for post with id {id}
-    </>
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+    </article>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = getAllPostIds();
+
+  const returnedPosts = posts.map((post) => {
+    return { id: post.id };
+  });
+  return returnedPosts;
 }
