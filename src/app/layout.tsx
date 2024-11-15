@@ -30,9 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[auto_1fr_auto] h-screen`}
       >
-        <Header/>
-        {children}
-        <Footer/>
+        <Header />
+        <main className="container mx-auto">{children}</main>
+        <Footer />
       </body>
     </html>
   );

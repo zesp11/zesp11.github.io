@@ -19,7 +19,7 @@ export default async function PostPage({
   const post = await getPostData(postId);
 
   return (
-    <article>
+    <article className="prose prose-dark">
       <h1>{post.title}</h1>
       <p>{post.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />

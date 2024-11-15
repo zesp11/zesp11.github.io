@@ -7,9 +7,9 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="border-b border-white flex justify-between items-center p-1">
+    <header className="border-b border-foreground flex justify-between items-center p-1">
       <Link className="p-1" href={"/"}>
-        <div className="aspect-square h-6 bg-white rotate-[15deg]"></div>
+        <div className="aspect-square h-6 bg-foreground rotate-[15deg]"></div>
       </Link>
 
       <nav className="flex gap-1 text-sm">
