@@ -1,6 +1,6 @@
 ---
 title: "My First Post"
-date: "2024-11-15"
+date: "2024-09-15"
 excerpt: "This is the excerpt of my first post."
 ---
 

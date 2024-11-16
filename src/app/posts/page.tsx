@@ -1,7 +1,9 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts"; // Adjust the path based on your project structure
+import PostItem from "../components/PostListItem";
 
+// TODO: specify types in one place
 interface Post {
   id: string;
   title: string;
@@ -17,21 +19,14 @@ export default async function ListMultiplePost() {
   const allPostsData = await getSortedPostsData();
 
   return (
-    <section className="p-2">
-      <h1>All Posts</h1>
-      <ul>
-        {allPostsData.map(({ id, title, date, excerpt }) => (
-          <li key={id}>
-            <article>
-              <h2>
-                <Link 
-                href={`/posts/${id}`}
-                className="border p-1"
-                >{title}</Link>
-              </h2>
-              <p>{date}</p>
-              {excerpt && <p>{excerpt}</p>}
-            </article>
+    // TODO: add sorting by latest etc
+    <section className="p-1">
+      <ul className="space-y-4">
+        {allPostsData.map((post) => (
+          <li key={post.id}>
+            <Link href={`/posts/${post.id}`}>
+              <PostItem post={post}/>
+            </Link>
           </li>
         ))}
       </ul>

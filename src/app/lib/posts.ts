@@ -71,7 +71,6 @@ export function getSortedPostsData(): PostData[] {
  * @returns {Promise<PostData>} - The post data including contentHtml and metadata.
  */
 export async function getPostData(id: string): Promise<PostData> {
-  console.log("getPostData(): Waiting for id", id);
   const filePath = path.join(postsDirectory, `${id}.md`); // Path to the specific markdown file
   const fileContents = fs.readFileSync(filePath, "utf8"); // Read file content
 
