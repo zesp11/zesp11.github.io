@@ -74,7 +74,7 @@ export default function CardStack() {
           {/* Reverse the array to animate the last cards first */}
           {cards.map((card, i) => {
             // Define a threshold for each card's animation
-            const step = 0.16;
+            const step = 0.142;
             const thresholdStart = sectionStartPercentage + (cards.length - i) * step; // Custom threshold for each card
             const thresholdEnd = thresholdStart + step; // Next threshold for the card's fade out
             const direction = i % 2 != 0 ? '-100vw' : '100vw';

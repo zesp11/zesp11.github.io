@@ -15,7 +15,10 @@ export default async function PostPage({
     <article className="prose prose-dark">
       <h1>{post.title}</h1>
       <p>{post.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        className="text-sm sm:text-base"
+      />
     </article>
   );
 }

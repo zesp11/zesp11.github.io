@@ -17,7 +17,7 @@ export default function Header() {
           <Link
             href={l.url}
             key={i}
-            className="px-2 rounded bg-white text-black"
+            className="px-2 rounded text-black bg-gray-300"
           >
             {l.label}
           </Link>
