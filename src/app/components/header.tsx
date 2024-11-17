@@ -6,7 +6,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 const links = [
   { url: "/posts", label: "Posts" },
-  { url: "/TODO", label: "Harmonogram" },
+  { url: "/harmonogram", label: "Harmonogram" },
   { url: "/members", label: "Members" },
 ];
 
@@ -30,7 +30,6 @@ export default function Header() {
 
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        console.log('closing menu');
         setIsMenuOpen(false);
       }
     }
