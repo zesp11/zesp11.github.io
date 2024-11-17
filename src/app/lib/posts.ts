@@ -12,7 +12,7 @@ interface PostMetadata {
   title: string;
   date: string;
   excerpt?: string;
-  [key: string]: any; // For any additional metadata fields
+  // [key: string]: any; // For any additional metadata fields
 }
 
 // Define the type for a single post's data
@@ -52,8 +52,8 @@ export function getSortedPostsData(): PostData[] {
 
     return {
       id,
-      ...(data as PostMetadata), // Explicitly cast to PostMetadata
-    };
+      ...(data), // Explicitly cast to PostMetadata
+    } as PostData;
   });
 
   // Sort posts by date (newest first)

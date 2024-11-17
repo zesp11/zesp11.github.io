@@ -1,11 +1,4 @@
-import { GetStaticProps, GetStaticPaths } from "next";
 import { getAllPostIds, getPostData } from "../../lib/posts"; // Adjust path based on your project structure
-
-interface PostData {
-  title: string;
-  date: string;
-  contentHtml: string;
-}
 
 // redirect to 404 for non-existent static params
 export const dynamicParams = false;

@@ -1,20 +1,8 @@
-import { GetStaticProps } from "next";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts"; // Adjust the path based on your project structure
 import PostItem from "../components/PostListItem";
 
 // TODO: specify types in one place
-interface Post {
-  id: string;
-  title: string;
-  date: string;
-  excerpt?: string;
-}
-
-interface PostsPageProps {
-  allPostsData: Post[];
-}
-
 export default async function ListMultiplePost() {
   const allPostsData = await getSortedPostsData();
 
