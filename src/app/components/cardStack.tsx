@@ -10,8 +10,22 @@ const colors = [
   "bg-blue-500",
 ];
 
+interface Cards {
+  title: string;
+};
+
+const cards: Cards[] = [
+  { title: "1" },
+  { title: "2" },
+  { title: "3" },
+  { title: "4" },
+  { title: "5" },
+];
+
 export default function CardStack() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [sectionStartPercentage, setSectionStartPercentage] = useState(0); // Store the section start percentage
 
   // Track the scroll position
   const handleScroll = () => {
@@ -27,17 +41,41 @@ export default function CardStack() {
     };
   }, []);
 
-  const colors = ["bg-blue-200", "bg-red-200", "bg-yellow-200", "bg-purple-200", "bg-pink-200"];
+  useEffect(() => {
+    const handleSectionStart = () => {
+      if (sectionRef.current) {
+        const sectionTop = sectionRef.current.getBoundingClientRect().top;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const sectionStart = (sectionTop + window.scrollY) / maxScroll;
+        setSectionStartPercentage(sectionStart); // Set the section start percentage
+      }
+    };
+
+    // Run once on mount to get the section start percentage
+    handleSectionStart();
+
+    // Optionally, recalculate if the window size changes
+    window.addEventListener("resize", handleSectionStart);
+    return () => {
+      window.removeEventListener("resize", handleSectionStart);
+    };
+  }, []);
 
   return (
-    <section className="bg-green-100 h-[1000vh] relative">
+    <section
+      ref={sectionRef}
+      className="bg-green-100 relative"
+      style={{
+        height: `${2 * 100 * cards.length}vh`,
+      }}
+    >
       <div className="sticky top-[20%]">
         <div className="relative w-full aspect-square overflow-hidden">
           {/* Reverse the array to animate the last cards first */}
-          {Array.from({ length: 5 }).map((_, i) => {
+          {cards.map((card, i) => {
             // Define a threshold for each card's animation
-            const step = 0.09;
-            const thresholdStart = 0.50 + (5 - i) * step; // Custom threshold for each card
+            const step = 0.16;
+            const thresholdStart = sectionStartPercentage + (cards.length - i) * step; // Custom threshold for each card
             const thresholdEnd = thresholdStart + step; // Next threshold for the card's fade out
             const direction = i % 2 != 0 ? '-100vw' : '100vw';
 
@@ -55,7 +93,7 @@ export default function CardStack() {
                   zIndex: i,
                 }}
               >
-                {i + 1}
+                {card.title}
               </div>
             );
           })}
