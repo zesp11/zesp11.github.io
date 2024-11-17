@@ -30,7 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[auto_1fr_auto] h-screen`}
       >
-        <Header />
+        {/* add padding because header is fixed */}
+        <div className="h-10 z-10">
+          <Header />
+        </div>
+
         <main className="container mx-auto p-4">{children}</main>
         <Footer />
       </body>
