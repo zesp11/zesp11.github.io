@@ -12,14 +12,16 @@ export default async function PostPage({
   const post = await getPostData(postId);
 
   return (
-    <article className="prose prose-dark">
-      <h1>{post.title}</h1>
-      <p>{post.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        className="text-sm sm:text-base"
-      />
-    </article>
+    <div className='flex justify-center ' >
+      <article className="prose prose-dark  lg:max-w-2xl">
+        <h1>{post.title}</h1>
+        <p>{post.date}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          className="text-sm sm:text-base"
+        />
+      </article>
+    </div >
   );
 }
 

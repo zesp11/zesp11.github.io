@@ -14,10 +14,12 @@ export default async function Page() {
   const contentHtml = processedContent.toString();
 
   return (
-    <article
-      className="prose prose-dark"
-      dangerouslySetInnerHTML={{ __html: contentHtml }}
-    >
-    </article>
+    <div className='flex justify-center'>
+      <article
+        className="prose prose-dark w-full"
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
+      >
+      </article>
+    </div>
   );
 }

@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const colors = [
-  "bg-blue-100",
-  "bg-blue-200",
-  "bg-blue-300",
-  "bg-blue-400",
-  "bg-blue-500",
+  "bg-gray-100",
+  "bg-gray-200",
+  "bg-gray-300",
+  "bg-gray-200",
+  "bg-gray-100",
 ];
 
 interface Cards {
@@ -64,7 +64,7 @@ export default function CardStack() {
   return (
     <section
       ref={sectionRef}
-      className="bg-green-100 relative"
+      className="bg-white relative"
       style={{
         height: `${2 * 100 * cards.length}vh`,
       }}
@@ -82,7 +82,7 @@ export default function CardStack() {
             return (
               <div
                 key={i}
-                className={`absolute top-[10%] left-0 right-0 rounded shadow mx-auto h-5/6 w-2/3 grid place-content-center text-2xl ${colors[i % colors.length]}`}
+                className={`absolute top-[10%] left-0 right-0 rounded shadow mx-auto aspect-[4/5] w-48 md:w-60 grid place-content-center text-2xl ${colors[i % colors.length]}`}
                 style={{
                   rotate: `${(i % 4 - 2) * -2}deg`,
                   // Slide the cards based on scroll position
