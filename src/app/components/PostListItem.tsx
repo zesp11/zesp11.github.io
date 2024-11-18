@@ -12,8 +12,10 @@ export default function PostItem({ post }: { post: Post }) {
         <h2 className="text-2xl font-bold text-gray-800 mb-2">{post.title}</h2>
         <p className="text-gray-600 text-sm mb-4">{post.date}</p>
         <p className="text-gray-700 line-clamp-3">{post.excerpt}</p>
-        <div className="inline-block mt-4 text-blue-600  hover:underline font-semibold">
-          Read More →
+        <div className="flex justify-end">
+          <div className="inline-block mt-4 text-blue-600  hover:underline font-semibold justify-end">
+            Read More →
+          </div>
         </div>
       </div>
     </article>

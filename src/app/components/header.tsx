@@ -71,26 +71,28 @@ export default function Header() {
       </section>
 
 
-      <nav className={`
+      <section className={`
           ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-           transition-transform flex absolute top-full w-48 sm:w-56 right-0 h-screen flex-col gap-2 text-sm p-2 bg-white border border-gray-200 shadow-lg
+           transition-transform absolute top-full w-48 sm:w-56 right-0 h-screen text-sm p-2 bg-white border border-gray-200 shadow-lg
            `}
         ref={navRef}
       >
-        {links.map((l, i) => (
-          <Link
-            href={l.url}
-            key={i}
-            className={`
+        <nav className="flex flex-col gap-2">
+          {links.map((l, i) => (
+            <Link
+              href={l.url}
+              key={i}
+              className={`
               font-semibold text-center border-gray-100 border-b px-3 py-1 my-1 rounded text-gray-800 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150
               ${pathname === l.url ? 'bg-foreground text-background' : ''}
               `}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            {l.label}
-          </Link>
-        ))}
-      </nav>
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+      </section>
     </header>
   );
 }
