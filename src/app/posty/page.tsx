@@ -12,7 +12,7 @@ export default async function ListMultiplePost() {
       <ul className="space-y-4">
         {allPostsData.map((post) => (
           <li key={post.id}>
-            <Link href={`/posts/${post.id}`}>
+            <Link href={`/posty/${post.id}`}>
               <PostItem post={post}/>
             </Link>
           </li>

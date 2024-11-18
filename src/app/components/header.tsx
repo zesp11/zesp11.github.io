@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const links = [
-  { url: "/posts", label: "Posts" },
+  { url: "/posty", label: "Posty" },
   { url: "/harmonogram", label: "Harmonogram" },
-  { url: "/members", label: "Members" },
+  { url: "/czlonkowie", label: "Czlonkowie" },
 ];
 
 export default function Header() {
