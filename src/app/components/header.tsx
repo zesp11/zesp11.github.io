@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const links = [
   { url: "/posty", label: "Posty" },
@@ -17,6 +18,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const navRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +34,7 @@ export default function Header() {
     }
 
     const handleClickOutside = (event: MouseEvent) => {
-      if ((navRef.current && !navRef.current.contains(event.target as Node)) 
+      if ((navRef.current && !navRef.current.contains(event.target as Node))
         && (buttonRef.current && !buttonRef.current.contains(event.target as Node))) {
         setIsMenuOpen(false);
       }
@@ -69,15 +71,20 @@ export default function Header() {
       </section>
 
 
-      <nav
-        className={`${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform flex absolute top-full w-48 sm:w-56 right-0 h-screen flex-col gap-2 text-sm p-2 bg-white border border-gray-200 shadow-lg`}
+      <nav className={`
+          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+           transition-transform flex absolute top-full w-48 sm:w-56 right-0 h-screen flex-col gap-2 text-sm p-2 bg-white border border-gray-200 shadow-lg
+           `}
         ref={navRef}
       >
         {links.map((l, i) => (
           <Link
             href={l.url}
             key={i}
-            className="font-semibold text-center border-gray-100 border-b px-3 py-1 my-1 rounded text-gray-800 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150"
+            className={`
+              font-semibold text-center border-gray-100 border-b px-3 py-1 my-1 rounded text-gray-800 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150
+              ${pathname === l.url ? 'bg-foreground text-background' : ''}
+              `}
             onClick={() => setIsMenuOpen(false)}
           >
             {l.label}
