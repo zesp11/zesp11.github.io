@@ -6,7 +6,7 @@ import html from 'remark-html';
 
 export default async function Page() {
   // Read markdown file
-  const filePath = path.join(process.cwd(), 'descriptions', 'harmonogram.md');
+  const filePath = path.join(process.cwd(), 'descriptions', 'opis.md');
   const fileContent = fs.readFileSync(filePath, 'utf-8');
 
   // Convert markdown to HTML

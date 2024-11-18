@@ -8,6 +8,7 @@ const links = [
   { url: "/posty", label: "Posty" },
   { url: "/harmonogram", label: "Harmonogram" },
   { url: "/czlonkowie", label: "Czlonkowie" },
+  { url: "/opis", label: "Opis Projektu" },
 ];
 
 export default function Header() {
