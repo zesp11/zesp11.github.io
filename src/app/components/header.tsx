@@ -16,12 +16,14 @@ export default function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0)
   const navRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsHeaderVisible(false);
+        // setIsMenuOpen(false);  // optional?
       } else {
         setIsHeaderVisible(true);
       }
@@ -30,7 +32,8 @@ export default function Header() {
     }
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      if ((navRef.current && !navRef.current.contains(event.target as Node)) 
+        && (buttonRef.current && !buttonRef.current.contains(event.target as Node))) {
         setIsMenuOpen(false);
       }
     }
@@ -58,27 +61,29 @@ export default function Header() {
           className="pr-2"
           onClick={() => setIsMenuOpen(prev => !prev)}
           aria-label="Toggle menu"
+          ref={buttonRef}
         >
-          <AiOutlineMenu size={24} color="black"/>
+          <AiOutlineMenu size={24} color="black" />
         </button>
 
-        <nav
-          className={`${isMenuOpen ? "flex scale-y-100 opacity-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"
-            } flex-col gap-2 text-sm p-2 bg-white border border-gray-200 absolute top-full right-0 mt-2 shadow-lg rounded transform origin-top transition-transform duration-200 ease-out z-20`}
-          ref={navRef}
-        >
-          {links.map((l, i) => (
-            <Link
-              href={l.url}
-              key={i}
-              className="font-semibold text-center px-3 py-2 rounded text-gray-800 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 transition-colors duration-150"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
       </section>
+
+
+      <nav
+        className={`${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform flex absolute top-full w-48 sm:w-56 right-0 h-screen flex-col gap-2 text-sm p-2 bg-white border border-gray-200 shadow-lg`}
+        ref={navRef}
+      >
+        {links.map((l, i) => (
+          <Link
+            href={l.url}
+            key={i}
+            className="font-semibold text-center border-gray-100 border-b px-3 py-1 my-1 rounded text-gray-800 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {l.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
