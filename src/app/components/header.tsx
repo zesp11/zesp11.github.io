@@ -97,10 +97,11 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex justify-end">
-            <ModeToggle />
+          <div 
+          className="flex justify-end mt-2 pr-2">
+          <ModeToggle />
           </div>
-        </section>
+          </section>
       </div>
 
       {/* Navigation for larger screens */}
