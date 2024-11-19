@@ -99,7 +99,7 @@ export default function Header() {
       </div>
 
       {/* Navigation for larger screens */}
-      <nav className="hidden md:flex gap-6">
+      <nav className="hidden md:flex mr-4 gap-6">
         {links.map((l, i) => (
           <Link
             href={l.url}

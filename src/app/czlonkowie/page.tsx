@@ -1,7 +1,6 @@
-import AnimatedCard from "../components/animatedCard";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import MemberCard from '../components/memberCard';
 
-interface Member {
+export interface Member {
   firstName: string;
   lastName: string;
   photo: string | null;
@@ -12,90 +11,78 @@ interface Member {
 // TODO: add real data
 const members: Member[] = [
   {
-    firstName: "Alice",
-    lastName: "Johnson",
-    photo: null, // Replace with real image URLs
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    firstName: "Agnieszka",
+    lastName: "Uznańska",
+    photo: null,
+    github: null,
+    linkedin: 'https://linkedin.com/in/agnieszkauznanska',
   },
   {
-    firstName: "Bob",
-    lastName: "Smith",
+    firstName: "Franciszek",
+    lastName: "Szary",
     photo: null,
-    github: "https://github.com",
+    github: "https://github.com/FranciszekSzary1",
     linkedin: null,
   },
   {
-    firstName: "Carol",
-    lastName: "Williams",
+    firstName: "Cezary",
+    lastName: "Arszyński",
     photo: null,
-    github: null,
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/Delfin22",
+    linkedin: null,
   },
   {
-    firstName: "David",
-    lastName: "Brown",
+    firstName: "Igor",
+    lastName: "Jeziorski",
     photo: null,
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: 'https://github.com/IgoRix08',
+    linkedin: null,
   },
   {
-    firstName: "Eve",
-    lastName: "Davis",
+    firstName: "Kamil",
+    lastName: "Konarzewski",
     photo: null,
-    github: "https://github.com",
+    github: "https://github.com/K4-mil",
+    linkedin: null,
+  },
+  {
+    firstName: "Paweł",
+    lastName: "Charysz",
+    photo: null,
+    github: "https://github.com/Erdahil",
+    linkedin: null,
+  },
+  {
+    firstName: "Kacper",
+    lastName: "Urbański",
+    photo: null,
+    github: "https://github.com/Serp-ent",
     linkedin: null,
   },
 ];
 
+const TEAM_LEADER = 0;
+
 export default function Page() {
   return (
-    <section className="p-6 text-gray-800 overflow-x-hidden">
-      <h1 className="text-3xl font-bold mb-6 text-center">Team Members</h1>
+    <section className="p-1 mx-auto sm:max-w-4xl bg-white">
+      <div className="flex justify-center">
+        <h1 className="text-2xl font-bold mb-4">Zespol XI</h1>
+      </div>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {members.map((member, index) => (
-          <li key={index}>
-            <AnimatedCard direction={`${index % 2 === 0 ? "left" : "right"}`}>
-              <div className="bg-white shadow rounded overflow-hidden">
-                <div
-                  className="w-full h-40 bg-gray-300"
-                  style={{
-                    backgroundColor: "#ccc", // Simulated photo background color
-                  }}
-                ></div>
-                <div className="p-4 text-center">
-                  <h2 className="text-lg font-semibold">
-                    {member.firstName} {member.lastName}
-                  </h2>
-                  <div className="flex justify-center items-center mt-2 space-x-3">
-                    {member.github && member.github !== null && (
-                      <a
-                        href={member.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-gray-900"
-                      >
-                        <AiFillGithub size={30}/>
-                      </a>
-                    )}
-                    {member.linkedin && member.linkedin !== null && (
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-gray-900"
-                      >
-                        <AiFillLinkedin size={30} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </AnimatedCard>
-          </li>
-        ))}
-      </ul>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative">
+        {/* Render the team leader at the center */}
+        <div className="sm:col-start-2 sm:-left-1/2 md:col-start-2 md:col-span-2 md:-left-1/4 relative">
+            <MemberCard member={members[TEAM_LEADER]} isLeader={true} />
+        </div>
+
+        {/* Render the rest of the members */}
+        {members
+          .filter((_, index) => index !== TEAM_LEADER)
+          .map((member, index) => (
+            <MemberCard key={index} member={member} isLeader={false} />
+          ))}
+      </div>
     </section>
   );
 }
