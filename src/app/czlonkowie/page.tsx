@@ -65,7 +65,7 @@ const TEAM_LEADER = 0;
 
 export default function Page() {
   return (
-    <section className="p-1 mx-auto sm:max-w-4xl bg-white">
+    <section className="p-1 mx-auto sm:max-w-4xl">
       <div className="flex justify-center">
         <h1 className="text-2xl font-bold mb-4">Zespol XI</h1>
       </div>

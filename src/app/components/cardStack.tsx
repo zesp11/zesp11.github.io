@@ -10,6 +10,14 @@ const colors = [
   "bg-gray-100",
 ];
 
+const darkColors = [
+  "dark:bg-gray-700",
+  "dark:bg-gray-800",
+  "dark:bg-gray-900",
+  "dark:bg-gray-800",
+  "dark:bg-gray-700",
+]
+
 interface Cards {
   title: string;
 };
@@ -64,7 +72,7 @@ export default function CardStack() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white relative"
+      className="bg-white dark:bg-gray-950 relative"
       style={{
         height: `${2 * 100 * cards.length}vh`,
       }}
@@ -82,7 +90,7 @@ export default function CardStack() {
             return (
               <div
                 key={i}
-                className={`absolute top-[10%] left-0 right-0 rounded shadow mx-auto aspect-[4/5] w-48 md:w-60 grid place-content-center text-2xl ${colors[i % colors.length]}`}
+                className={`absolute top-[10%] left-0 right-0 rounded shadow mx-auto aspect-[4/5] w-48 md:w-60 grid place-content-center text-2xl ${colors[i % colors.length]} ${darkColors[i % colors.length]}`}
                 style={{
                   rotate: `${(i % 4 - 2) * -2}deg`,
                   // Slide the cards based on scroll position

@@ -13,7 +13,7 @@ export default async function PostPage({
 
   return (
     <div className='flex justify-center ' >
-      <article className="prose prose-dark  lg:max-w-2xl">
+      <article className="prose dark:prose-invert  lg:max-w-2xl">
         <h1>{post.title}</h1>
         <p>{post.date}</p>
         <div

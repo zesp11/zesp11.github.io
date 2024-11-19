@@ -16,7 +16,7 @@ export default async function Page() {
   return (
     <div className='flex justify-center '>
       <article
-        className="prose prose-dark lg:max-w-2xl"
+        className="prose dark:prose-invert lg:max-w-2xl"
         dangerouslySetInnerHTML={{ __html: contentHtml }}
       >
       </article>

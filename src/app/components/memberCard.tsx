@@ -10,9 +10,14 @@ interface MemberCardProps {
 export default function MemberCard({ member, isLeader }: MemberCardProps) {
   return (
     <div
-      className={`flex flex-col items-center bg-white shadow-md rounded-lg p-4 transition-transform duration-300 ${
-        isLeader ? "border-4 border-black" : "border border-gray-300"
-      } hover:scale-105 hover:shadow-xl`}
+      className={`flex flex-col items-center p-4 rounded-lg transition-transform duration-300 
+        ${isLeader
+          ? "border-4 border-black dark:border-white"
+          : "border border-gray-300 dark:border-gray-600"
+        } 
+        bg-white dark:bg-gray-900 
+        shadow-md dark:shadow-xl
+        hover:scale-105 hover:shadow-xl`}
     >
       {/* Display the member's photo or a placeholder */}
       {member.photo ? (
@@ -24,27 +29,27 @@ export default function MemberCard({ member, isLeader }: MemberCardProps) {
           className="rounded-full transition-transform duration-300 hover:scale-110"
         />
       ) : (
-        <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center">
-          <span className="text-gray-500 text-xl">
+        <div className="bg-gray-200 dark:bg-gray-700 rounded-full w-24 h-24 flex items-center justify-center">
+          <span className="text-gray-500 dark:text-gray-400 text-xl">
             {member.firstName[0]}
             {member.lastName[0]}
           </span>
         </div>
       )}
       {/* Name */}
-      <h3 className="text-lg font-semibold mt-4 text-black transition-colors duration-300 hover:text-gray-700">
+      <h3 className="text-lg font-semibold mt-4 text-black dark:text-white transition-colors duration-300 hover:text-gray-700 dark:hover:text-gray-300">
         {member.firstName} {member.lastName}
       </h3>
       {/* Icons */}
       <div className="flex gap-4 mt-2">
         {member.github && (
           <a href={member.github} target="_blank" rel="noopener noreferrer">
-            <AiFillGithub className="text-gray-700 hover:text-black text-2xl transition-colors duration-300" size={32} />
+            <AiFillGithub className="text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white text-2xl transition-colors duration-300" size={32} />
           </a>
         )}
         {member.linkedin && (
           <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-            <AiFillLinkedin className="text-gray-700 hover:text-blue-600 text-2xl transition-colors duration-300" size={32} />
+            <AiFillLinkedin className="text-gray-700 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition-colors duration-300" size={32} />
           </a>
         )}
       </div>
