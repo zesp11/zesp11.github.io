@@ -64,7 +64,7 @@ export default function Header() {
       <div className="md:hidden">
         <section className="relative flex items-center">
           <button
-            className="pr-2"
+            className="pr-2 mr-2"
             onClick={() => setIsMenuOpen(prev => !prev)}
             aria-label="Toggle menu"
             ref={buttonRef}
@@ -105,7 +105,7 @@ export default function Header() {
       </div>
 
       {/* Navigation for larger screens */}
-      <section className="hidden md:flex items-center">
+      <section className="hidden md:flex items-center mr-4">
         <nav className="flex mr-4 gap-6">
           {links.map((l, i) => (
             <Link
