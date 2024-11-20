@@ -13,7 +13,7 @@ export default async function ListMultiplePost() {
         {allPostsData.map((post) => (
           <li 
           key={post.id}
-          className="sm:max-w-lg md:max-w-xl lg:max-w-2xl"
+          className="w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl"
           >
             <Link href={`/posty/${post.id}`}>
               <PostItem post={post}/>
