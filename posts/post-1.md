@@ -24,28 +24,5 @@ Aby rozpocząć pracę z Flutter, wykonaj następujące kroki:
 1. Zainstaluj Flutter SDK z [oficjalnej strony](https://flutter.dev).
 2. Skonfiguruj IDE, np. Android Studio lub VS Code.
 3. Utwórz pierwszy projekt za pomocą komendy:
-   ```bash
-   flutter create my_first_app
-   ```
 4. Uruchom aplikację na emulatorze lub urządzeniu fizycznym.
-  ```flutter
-  import 'package:flutter/material.dart';
 
-  void main() {
-    runApp(MyApp());
-  }
-
-  class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(title: Text("Witaj w Flutterze!")),
-          body: Center(
-            child: Text("To jest moja pierwsza aplikacja!"),
-          ),
-        ),
-      );
-    }
-  }
-  ```
