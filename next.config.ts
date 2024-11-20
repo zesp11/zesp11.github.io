@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: '/zesp11_page',
+  assetPrefix: '/zesp11_page',
 };
 
 export default nextConfig;
