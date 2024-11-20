@@ -1,5 +1,5 @@
 ---
-title: "Wprowadzenie do Flutter: Przewodnik dla początkujących"
+title: "Flutter"
 author: "Jan Kowalski"
 date: "2024-11-18"
 tags: ["Flutter", "Mobile Development", "Dart"]

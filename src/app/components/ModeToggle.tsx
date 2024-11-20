@@ -3,15 +3,7 @@
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
 import { Toggle } from "@/components/ui/toggle"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
@@ -27,7 +19,7 @@ export function ModeToggle() {
       aria-label="Toggle theme"
       className="border dark:border-primary dark:bg-background"
     >
-      {theme === "dark" ? <Moon/> : <Sun/>}
+      {theme === "dark" ? <Moon /> : <Sun />}
     </Toggle>
   );
 }
