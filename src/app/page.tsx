@@ -56,7 +56,9 @@ export default function Page() {
         </div>
       </section>
 
+      <div className="container mx-auto">
       <ToolsUsed />
+      </div>
     </>
   );
 }
