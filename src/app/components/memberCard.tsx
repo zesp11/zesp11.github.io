@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Member } from "../czlonkowie/page";
+import type { Member } from "../(nonMainPage)/czlonkowie/page";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 interface MemberCardProps {
@@ -17,7 +17,9 @@ export default function MemberCard({ member, isLeader }: MemberCardProps) {
         } 
         bg-white dark:bg-zinc-900
         shadow-md dark:shadow-xl
-        hover:scale-[1.012] hover:shadow-xl`}
+        hover:scale-[1.012] hover:shadow-xl
+        bg-opacity-90 dark:bg-opacity-30
+        `}
     >
       {/* Display the member's photo or a placeholder */}
       {member.photo ? (

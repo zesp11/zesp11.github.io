@@ -38,7 +38,7 @@ export default function RootLayout({
           // disableTransitionOnChange
         >
           {/* add padding because header is fixed */}
-          <div className="h-10 z-10">
+          <div className="h-10 z-50">
             <Header />
           </div>
 
