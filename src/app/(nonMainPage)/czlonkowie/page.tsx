@@ -1,4 +1,4 @@
-import MemberCard from '../components/memberCard';
+import MemberCard from '@/app/components/memberCard';
 
 export interface Member {
   firstName: string;

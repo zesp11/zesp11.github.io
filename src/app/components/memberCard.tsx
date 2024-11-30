@@ -15,9 +15,9 @@ export default function MemberCard({ member, isLeader }: MemberCardProps) {
           ? "border-4 border-black dark:border-white"
           : "border border-gray-300 dark:border-gray-600"
         } 
-        bg-white dark:bg-gray-900 
+        bg-white dark:bg-zinc-900
         shadow-md dark:shadow-xl
-        hover:scale-105 hover:shadow-xl`}
+        hover:scale-[1.012] hover:shadow-xl`}
     >
       {/* Display the member's photo or a placeholder */}
       {member.photo ? (

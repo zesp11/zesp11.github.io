@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getSortedPostsData } from "../lib/posts"; // Adjust the path based on your project structure
-import PostItem from "../components/PostListItem";
+import { getSortedPostsData } from "../../lib/posts"; // Adjust the path based on your project structure
+import PostItem from "../../components/PostListItem";
 
 // TODO: specify types in one place
 export default async function ListMultiplePost() {
