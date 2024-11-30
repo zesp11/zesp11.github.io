@@ -39,7 +39,7 @@ const tools: Tool[] = [
   },
   {
     name: "Flutter",
-    icon: <Image src="zesp11_page/flutter.svg" alt="Flutter Logo" className="w-12 h-12" width={48} height={48} />,
+    icon: <Image src="zesp11_page/public/flutter.svg" alt="Flutter Logo" className="w-12 h-12" width={48} height={48} />,
     color: "#02569B",
     mainPage: "https://flutter.dev/",
   },
