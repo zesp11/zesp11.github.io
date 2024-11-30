@@ -29,7 +29,7 @@ export default function Page() {
         href="https://github.com" // Replace with actual mobile app URL
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+        className="bg-blue-500 dark:bg-opacity-20 text-white px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-900 transition-colors"
       >
         Zobacz aplikację mobilną
       </a>
@@ -49,7 +49,7 @@ export default function Page() {
             href="https://github.com" // Replace with actual web app URL
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+            className="bg-blue-500 dark:bg-opacity-20 text-white px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-900 transition-colors"
           >
             Zobacz aplikację webową
           </a>
