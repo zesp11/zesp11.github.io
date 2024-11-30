@@ -8,7 +8,7 @@
     "build": "next build && mkdir out/public && cp -r public out",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "echo > out/.nojekyll&& gh-pages -d out"
+    "deploy": "echo > out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
