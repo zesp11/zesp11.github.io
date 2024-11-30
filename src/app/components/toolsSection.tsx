@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaGithub, FaReact } from "react-icons/fa";
 import { RiNextjsFill } from 'react-icons/ri';
 import { SiSpring, SiSpringboot } from "react-icons/si";interface Tool {
@@ -38,7 +39,7 @@ const tools: Tool[] = [
   },
   {
     name: "Flutter",
-    icon: <img src="zesp11_page/flutter.svg" alt="Flutter Logo" className="w-12 h-12" />,
+    icon: <Image src="zesp11_page/flutter.svg" alt="Flutter Logo" className="w-12 h-12" width={48} height={48} />,
     color: "#02569B",
     mainPage: "https://flutter.dev/",
   },
