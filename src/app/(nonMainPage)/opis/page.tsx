@@ -14,7 +14,7 @@ export default async function Page() {
   const contentHtml = processedContent.toString();
 
   return (
-    <div className='flex justify-center '>
+    <div className='flex justify-center my-4'>
       <article
         className="prose prose-sm sm:prose-base dark:prose-invert lg:max-w-2xl"
         dangerouslySetInnerHTML={{ __html: contentHtml }}
