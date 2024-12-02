@@ -1,4 +1,5 @@
 import ToolsUsed from "./components/toolsSection";
+import Typed from "./components/typed";
 
 export default function Page() {
   return (
@@ -8,8 +9,11 @@ export default function Page() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
             Cel projektu
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
             Projekt GoBook ma na celu stworzenie aplikacji wieloplatformowej, która umożliwi użytkownikom tworzenie, zarządzanie i odczytywanie interaktywnych książek przygodowych (gamebook).
+          </p>
+          <p className="text-xl font-semibold text-foreground">
+            <Typed />
           </p>
         </div>
       </section>
