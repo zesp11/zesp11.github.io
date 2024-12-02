@@ -51,7 +51,7 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <header className={`bg-background shadow dark:shadow-gray-800 flex justify-between items-center p-1 sm:p-4 w-screen transform transition-transform duration-200 fixed ${isHeaderVisible ? "translate-y-0" : '-translate-y-full'}`}>
+    <header className={`bg-card shadow dark:shadow-gray-800 flex justify-between items-center p-1 sm:p-4 w-screen transform transition-transform duration-200 fixed ${isHeaderVisible ? "translate-y-0" : '-translate-y-full'}`}>
       <Link
         className="p-1 flex gap-1"
         href={"/"}
@@ -106,12 +106,12 @@ export default function Header() {
 
       {/* Navigation for larger screens */}
       <section className="hidden md:flex items-center mr-4">
-        <nav className="flex mr-4 gap-6">
+        <nav className="flex mr-4 gap-4 items-center">
           {links.map((l, i) => (
             <Link
               href={l.url}
               key={i}
-              className={`font-medium text-sm transition-colors duration-150 ${pathname === l.url ? "border-b-2 border-primary" : ""
+              className={`font-medium text-sm transition-colors duration-150 ${pathname === l.url ? "border p-1 border-primary" : ""
                 }`}
             >
               {l.label}

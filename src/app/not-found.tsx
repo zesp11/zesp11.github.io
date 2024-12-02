@@ -1,11 +1,9 @@
 import Link from "next/link";
-import MouseTrail from "./components/blurryMouseTrail";
 
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center h-full bg-gray-100 dark:bg-inherit text-gray-800 dark:text-gray-200">
-      <MouseTrail />
-      <main className="text-center z-10 p-8">
+      <main className="text-center p-8">
         {/* Large Error Message */}
         <h1 className="text-6xl font-bold mb-4">404</h1>
         <p className="text-2xl mb-6">

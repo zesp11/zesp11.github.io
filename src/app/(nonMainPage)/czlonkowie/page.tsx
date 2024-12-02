@@ -67,14 +67,13 @@ const TEAM_LEADER = 0;
 export default function Page() {
   return (
     <section className="p-1 mx-auto sm:max-w-4xl">
-      <MouseTrail />
-      <div className="flex justify-center z-10">
-        <h1 className="text-2xl font-bold mb-4 z-10">Zespol XI</h1>
+      <div className="flex justify-center">
+        <h1 className="text-2xl font-bold mb-4">Zespol XI</h1>
       </div>
 
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative z-20">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative">
         {/* Render the team leader at the center */}
-        <div className="sm:col-start-2 sm:-left-1/2 md:col-start-2 md:col-span-2 md:-left-1/4 relative z-20">
+        <div className="sm:col-start-2 sm:-left-1/2 md:col-start-2 md:col-span-2 md:-left-1/4 relative">
           <MemberCard member={members[TEAM_LEADER]} isLeader={true} />
         </div>
 
