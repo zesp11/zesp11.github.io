@@ -67,7 +67,7 @@ Projekt realizuje zespół składający się z osób, które ściśle współpra
 ### Członkowie zespołu:
 
 1. **Agnieszka Uznańska** - LinkedIn: [agnieszkauznanska](https://linkedin.com/in/agnieszkauznanska)
-   - **Rola**: Team Leader
+   - **Rola**: Opiekun Zespołu
 2. **Franciszek Szary** - GitHub: [FranciszekSzary1](https://github.com/FranciszekSzary1)
    - **Rola**: Backend (Spring)
 3. **Cezary Arszyński** - GitHub: [Delfin22](https://github.com/Delfin22)
@@ -83,7 +83,7 @@ Projekt realizuje zespół składający się z osób, które ściśle współpra
 
 ### Opiekun zespołu:
 
-- **Agnieszka Uznańska** pełni rolę liderki zespołu, koordynując działania między członkami zespołu oraz dbając o integrację poszczególnych komponentów projektu.
+- **Agnieszka Uznańska** Odpowiada za monitorowanie postępów pracy zespołu, koordynowanie działań oraz dbanie o jakość realizowanych projektów, pomagając w utrzymaniu harmonii i efektywności współpracy.
 
 ---
 

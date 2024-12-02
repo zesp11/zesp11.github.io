@@ -9,7 +9,7 @@ import { ModeToggle } from "./ModeToggle";
 const links = [
   // { url: "/posty", label: "Posty" },
   { url: "/harmonogram", label: "Harmonogram" },
-  { url: "/czlonkowie", label: "Czlonkowie" },
+  { url: "/czlonkowie", label: "Członkowie" },
   { url: "/opis", label: "Opis Projektu" },
 ];
 

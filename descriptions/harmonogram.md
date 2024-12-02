@@ -6,7 +6,7 @@
 |-------------------|-----------------------------------------------------------------------------|
 | 29.10.2024        | Spotkanie organizacyjne, zawiązanie się zespołów, przydział opiekunów do zespołów |
 | 7.11.2024         | Nawiązanie kontaktu zespołów z opiekunami.                                    |
-| 30.11.2024        | Udostępnienie strony www zespołu.                                            |
+| 6.12.2024        | Udostępnienie strony www zespołu.                                            |
 | 6.12.2024         | Przygotowanie planu pracy zawierającego harmonogram działań i opis zadań zleconych poszczególnym członkom zespołu. Udostępnienie planu na stronie www zespołu. |
 | 03.02.2025        | Dostarczenie koordynatorowi przedmiotu raportów semestralnych.               |
 | 04.02-07.02.2025  | Semestralna ocena przebiegu realizacji zadania. Spotkania zespołów z koordynatorem. |
