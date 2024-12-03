@@ -16,8 +16,13 @@ export default async function Page() {
   return (
     <div className='flex justify-center my-4'>
       <article
-        className="my-10 prose prose-sm sm:prose-base dark:prose-invert lg:max-w-2xl"
+        className="my-10 prose dark:prose-invert prose-sm sm:prose-base lg:max-w-2xl"
         dangerouslySetInnerHTML={{ __html: contentHtml }}
+        style={
+          {
+          '--tw-prose-bullets': '#ffffff'
+        } as React.CSSProperties & Record<string, string>
+      }
       >
       </article>
     </div>

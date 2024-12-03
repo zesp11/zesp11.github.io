@@ -1,4 +1,3 @@
-import MouseTrail from '@/app/components/blurryMouseTrail';
 import MemberCard from '@/app/components/memberCard';
 
 export interface Member {
