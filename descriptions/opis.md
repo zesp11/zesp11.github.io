@@ -84,14 +84,3 @@ Projekt realizuje zespół składający się z osób, które ściśle współpra
 ### Opiekun zespołu:
 
 - **Agnieszka Uznańska** Odpowiada za monitorowanie postępów pracy zespołu, koordynowanie działań oraz dbanie o jakość realizowanych projektów, pomagając w utrzymaniu harmonii i efektywności współpracy.
-
----
-
-## Technologie
-
-Projekt wykorzystuje najnowsze narzędzia i technologie:
-
-- **Frontend**: React, Next.js, Tailwind CSS
-- **Backend**: Spring Boot, PostgreSQL, JWT
-- **Aplikacja Mobilna**: Flutter
-- **Testy**: Jest, Supertest, Postman
