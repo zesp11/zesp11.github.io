@@ -10,7 +10,7 @@ const links = [
   // { url: "/posty", label: "Posty" },
   { url: "/harmonogram", label: "Harmonogram" },
   { url: "/zespol", label: "Zespół" },
-  // { url: "/opis", label: "Opis Projektu" },
+  { url: "/opis", label: "Opis Projektu" },
 ];
 
 export default function Header() {
