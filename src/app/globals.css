@@ -77,3 +77,31 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.animated-gradient-text {
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #7f00ff,
+    /* Deep Purple */ #e100ff,
+    /* Vivid Violet */ #ff5f6d,
+    /* Soft Pink/Coral */ #ffc371,
+    /* Warm Peach */ #7f00ff /* Deep Purple to loop back */
+  );
+
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: no-wrap;
+  animation: gradient-animation 3s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}

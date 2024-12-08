@@ -57,7 +57,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			animation: {
-				'spin-slow': 'spin 20s linear infinite'
+				'spin-slow': 'spin 20s linear infinite',
+				'ping-spin': 'ping-spin 3s infinite'
 			},
 			keyframes: {
 				spin: {
@@ -69,6 +70,16 @@ export default {
 					},
 					'100%': {
 						transform: 'rotate(360deg)',
+					},
+				},
+				'ping-spin': {
+					from: {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1',
+					},
+					to: {
+						transform: 'scale(1) rotate(360deg)',
+						opacity: '0',
 					},
 				},
 			},

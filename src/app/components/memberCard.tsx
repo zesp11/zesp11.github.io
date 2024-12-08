@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Member } from "../(nonMainPage)/czlonkowie/page";
+import { Member } from "../(nonMainPage)/zespol/page";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 interface MemberCardProps {
