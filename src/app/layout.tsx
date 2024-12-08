@@ -29,13 +29,13 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[auto_1fr_auto] h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[auto_1fr_auto] min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          // enableSystem
-          // disableTransitionOnChange
+        // enableSystem
+        // disableTransitionOnChange
         >
           {/* add padding because header is fixed */}
           <div className="h-10">
