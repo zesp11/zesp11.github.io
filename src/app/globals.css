@@ -42,6 +42,11 @@ body {
     --radius: 0.5rem;
   }
   .dark {
+    /* --color: #F3E8CA 44 63% 87%; */
+    /* --color: #322505 43 82% 11%; */
+    /* --color: #FA802F 24 95% 58%; */
+    /* --color: #9C8B73 35 17% 53%; */
+
     --background: 28.24deg 24.64% 27.06%;
     --foreground: 0 0% 98%;
     --card: 18deg 11.36% 17.25%;
