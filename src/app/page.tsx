@@ -1,6 +1,7 @@
 'use client';
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2 } from "react-icons/tb";
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -19,12 +20,21 @@ export default function Page() {
         {/* Welcome Section */}
         <ParallaxLayer
           offset={0}
+          speed={2}
+          className="-relative grid place-content-center"
+          style={{
+            backgroundImage: "linear-gradient(-10deg, #F3E8CA 60%, #322505 62%)",
+          }}
+        >
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={0}
           speed={0.2}
           className='relative grid place-content-center'
         >
           <div className=''>
             <Image
-              src={'main.png'}
+              src={'zesp11_page/main.png'}
               alt=''
               width={400}
               height={300}
@@ -38,24 +48,19 @@ export default function Page() {
           className="grid place-content-center"
           onClick={() => handleScrollToNext(1)}
         >
-          <div className="bg-black bg-opacity-50 px-4 py-6 text-center rounded">
+          <div className="bg-black bg-opacity-60 px-6 py-8 text-center rounded">
             <h1 className="text-white text-4xl font-bold mb-6">
-              Witaj na platformie <span className="text-yellow-400">Zespół XI</span>
+              Witaj na platformie <span className="text-accent">Zespół XI</span>
             </h1>
             <p className="text-gray-100 text-lg max-w-md mx-auto mb-8">
               Nasza platforma wspiera zespoły w realizacji wspólnych celów, łącząc
               ludzi i umożliwiając kreatywną współpracę.
             </p>
             <div className="text-yellow-300 text-xl font-medium mb-6">
-              <div className="relative">
-                <span className="z-10 animated-gradient-text">
-                  TODO: Kilka tekstow
-                  {/* Rozwiązuj zadania zespołowe */}
-                </span>
-              </div>
+              TODO: add typing animation here
             </div>
             <button
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="text-lg px-6 py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(1)}
             >
               Odkryj funkcje
@@ -71,7 +76,7 @@ export default function Page() {
         >
           <div>
             <Image
-              src={'creator-usage.webp'}
+              src={'zesp11_page/creator-usage.webp'}
               alt=''
               width={400}
               height={300}
@@ -86,14 +91,14 @@ export default function Page() {
           className="grid place-content-center text-white py-20"
           onClick={() => handleScrollToNext(2)}
         >
-          <div className="text-center px-4 bg-black bg-opacity-40 py-6 rounded">
+          <div className="text-center px-4 bg-black bg-opacity-50 py-6 rounded">
             <h2 className="text-3xl font-bold mb-6">Gamebook Creator</h2>
             <p className="text-lg mb-4">
               Stwórz interaktywne książki przygodowe, które angażują graczy w pełni
               dynamiczne historie.
             </p>
             <button
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(2)}
             >
               Twórz teraz
@@ -101,9 +106,79 @@ export default function Page() {
           </div>
         </ParallaxLayer>
 
-
-
         {/* Mobile App Section */}
+        <ParallaxLayer
+          offset={2}
+          speed={0.8}
+          className="relative grid place-content-center"
+          style={{
+            backgroundImage: "linear-gradient(12deg, #F3E8CA 20%, #9C8B73 50%, #9C8B73 50%, #F3E8CA 80%)",
+          }}
+        >
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={2}
+          speed={0.5}
+          className='relative'
+        >
+          <div className="text-accent absolute top-1/3 right-28">
+            <TbTopologyStarRing size={64} />
+          </div>
+          <div className="text-accent absolute top-1/3 left-1/3">
+            <TbTopologyRing3 size={48} />
+          </div>
+          <div className="text-accent absolute top-10 right-1/4">
+            <TbTopologyComplex size={72} />
+          </div>
+          <div className="text-accent absolute bottom-10 left-1/10">
+            <TbTopologyBus size={56} />
+          </div>
+          <div className="text-accent absolute top-20 left-1/2">
+            <TbTopologyRing3 size={96} />
+          </div>
+
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={0.2}
+          className='relative'
+        >
+          <div className="text-accent absolute bottom-1/4 right-1/4">
+            <TbTopologyRing2 size={64} />
+          </div>
+          <div className="text-accent absolute top-1/4 right-1/4">
+            <TbTopologyComplex size={48} />
+          </div>
+          <div className="text-accent absolute bottom-1/3 left-1/3">
+            <TbTopologyRing2 size={72} />
+          </div>
+          <div className="text-accent absolute top-1/4 right-3/4">
+            <TbTopologyStarRing2 size={88} />
+          </div>
+          <div className="text-accent absolute top-1/2 left-1/4">
+            <TbTopologyStarRing size={32} />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={0.8}
+          className='relative'
+        >
+          <div className="text-accent absolute bottom-8 right-1/2">
+            <TbTopologyComplex size={54} />
+          </div>
+          <div className="text-accent absolute top-4 left-4">
+            <TbTopologyStarRing size={64} />
+          </div>
+          <div className="text-accent absolute bottom-1/2 left-1/2">
+            <TbTopologyStarRing size={108} />
+          </div>
+          <div className="text-accent absolute bottom-1/4 right-10">
+            <TbTopologyStarRing size={64} />
+          </div>
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
@@ -112,7 +187,7 @@ export default function Page() {
         >
           <div>
             <Image
-              src={'phone.png'}
+              src={'zesp11_page/phone.png'}
               alt=''
               width={400}
               height={300}
@@ -121,20 +196,21 @@ export default function Page() {
           </div>
         </ParallaxLayer>
 
+
         <ParallaxLayer
           offset={2}
           speed={0.3}
           className="text-white py-20 grid place-content-center"
           onClick={() => handleScrollToNext(3)}
         >
-          <div className="bg-black bg-opacity-40 px-4 py-6 rounded text-center">
+          <div className="bg-black bg-opacity-50 px-4 py-6 rounded text-center">
             <h2 className="text-3xl font-bold mb-6">Aplikacja Mobilna</h2>
             <p className="text-lg mb-4">
               Zawsze miej swoje książki przygodowe pod ręką dzięki naszej aplikacji
               mobilnej.
             </p>
             <button
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(3)}
             >
               Pobierz aplikację
@@ -148,7 +224,7 @@ export default function Page() {
           offset={3}
           speed={0.1}
           style={{
-            backgroundImage: "url('logos.png')",
+            backgroundImage: "url('zesp11_page/logos.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
@@ -157,7 +233,7 @@ export default function Page() {
           offset={3}
           speed={0.9}
           style={{
-            backgroundImage: "url('clouds.png')",
+            backgroundImage: "url('zesp11_page/clouds.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
@@ -166,7 +242,7 @@ export default function Page() {
           offset={3}
           speed={1.3}
           style={{
-            backgroundImage: "url('hero.png')",
+            backgroundImage: "url('zesp11_page/hero.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
@@ -177,13 +253,13 @@ export default function Page() {
           className="grid place-content-center py-20"
           onClick={() => handleScrollToNext(0)}
         >
-          <div className="text-center px-4 bg-black bg-opacity-40 py-6 rounded">
+          <div className="text-center px-4 text-white bg-black bg-opacity-50 py-6 rounded">
             <h2 className="text-3xl font-bold mb-6">Gotowy do działania?</h2>
             <p className="text-lg mb-8">
               Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
             </p>
             <button
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
             >
               Rozpocznij teraz
             </button>
