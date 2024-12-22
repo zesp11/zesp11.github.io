@@ -17,7 +17,7 @@ export function ModeToggle() {
       pressed={theme === "dark"}
       onClick={toggleTheme}
       aria-label="Toggle theme"
-      className="border dark:border-primary dark:bg-background"
+      className="border-2 dark:border-foreground dark:bg-accent"
     >
       {theme === "dark" ? <Moon /> : <Sun />}
     </Toggle>

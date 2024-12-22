@@ -65,7 +65,7 @@ export default function Page() {
               Nasza platforma wspiera zespoły w realizacji wspólnych celów, łącząc
               ludzi i umożliwiając kreatywną współpracę.
             </p>
-            <div className="font-bold text-accent text-2xl mb-6">
+            <div className="font-bold mb-6 text-white">
               <TypeAnimation
                 sequence={[
                   'Integruj się ze swoim zespołem',
@@ -78,6 +78,9 @@ export default function Page() {
                   1000
                 ]}
                 wrapper="div"
+                style={{
+                  fontSize: "2rem",
+                }}
                 speed={40}
                 repeat={Infinity}
               />
@@ -215,7 +218,7 @@ export default function Page() {
               alt=''
               width={400}
               height={300}
-              className='h-3/5 w-auto'
+              className='h-3/5 w-auto animate-floating'
             />
           </div>
         </ParallaxLayer>
