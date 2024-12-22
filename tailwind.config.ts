@@ -58,7 +58,8 @@ export default {
 			},
 			animation: {
 				'spin-slow': 'spin 20s linear infinite',
-				'ping-spin': 'ping-spin 3s infinite'
+				'ping-spin': 'ping-spin 3s infinite',
+				floating: 'floating 3s ease-in-out infinite',
 			},
 			keyframes: {
 				spin: {
@@ -81,6 +82,11 @@ export default {
 						transform: 'scale(1) rotate(360deg)',
 						opacity: '0',
 					},
+				},
+				floating: {
+					'0%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-15px)' },
+					'100%': { transform: 'translateY(0)' },
 				},
 			},
 		}

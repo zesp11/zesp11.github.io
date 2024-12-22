@@ -2,6 +2,7 @@
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2 } from "react-icons/tb";
+import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -21,11 +22,19 @@ export default function Page() {
         <ParallaxLayer
           offset={0}
           speed={2}
-          className="-relative grid place-content-center"
+          className="relative grid place-content-center h-full"
           style={{
-            backgroundImage: "linear-gradient(-10deg, #F3E8CA 60%, #322505 62%)",
+            backgroundImage: "linear-gradient(0deg, #F3E8CA 50%, #FA802F 50%)",
           }}
         >
+          <h1 
+          className="absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
+          style={{
+            fontSize: "12rem",
+          }}
+          >
+            Zespół 11
+          </h1>
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
@@ -38,7 +47,7 @@ export default function Page() {
               alt=''
               width={400}
               height={300}
-              className='h-auto w-full'
+              className='h-auto w-full animate-floating'
             />
           </div>
         </ParallaxLayer>
@@ -48,17 +57,32 @@ export default function Page() {
           className="grid place-content-center"
           onClick={() => handleScrollToNext(1)}
         >
-          <div className="bg-black bg-opacity-60 px-6 py-8 text-center rounded">
-            <h1 className="text-white text-4xl font-bold mb-6">
+          <div className="bg-black bg-opacity-60 px-6 py-8 text-center rounded space-y-4">
+            <h1 className="text-white text-4xl font-bold">
               Witaj na platformie <span className="text-accent">Zespół XI</span>
             </h1>
-            <p className="text-gray-100 text-lg max-w-md mx-auto mb-8">
+            <p className="text-gray-100 text-lg max-w-md mx-auto">
               Nasza platforma wspiera zespoły w realizacji wspólnych celów, łącząc
               ludzi i umożliwiając kreatywną współpracę.
             </p>
-            <div className="text-yellow-300 text-xl font-medium mb-6">
-              TODO: add typing animation here
+            <div className="font-bold text-accent text-2xl mb-6">
+              <TypeAnimation
+                sequence={[
+                  'Integruj się ze swoim zespołem',
+                  1000,
+                  'Twórz własne historie',
+                  1000,
+                  'Poznawaj nowe miejsca',
+                  1000,
+                  'Spotykaj nowych ludzi',
+                  1000
+                ]}
+                wrapper="div"
+                speed={40}
+                repeat={Infinity}
+              />
             </div>
+
             <button
               className="text-lg px-6 py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(1)}
