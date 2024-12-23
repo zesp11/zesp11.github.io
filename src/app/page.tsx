@@ -6,6 +6,13 @@ import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Footer from './components/footer';
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Specify the font weights you need
+  display: 'swap',       // Optimize font rendering
+});
 
 export default function Page() {
   const parallaxRef = useRef<IParallax | null>(null);
@@ -29,7 +36,11 @@ export default function Page() {
           }}
         >
           <h1
-            className="text-[21vw] absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
+            className="text-[21vw] lg:text-[18vw] absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
+            style={{
+              fontFamily: montserrat.style.fontFamily,
+              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.4)',
+            }}
           >
             Zespół 11
           </h1>
