@@ -24,7 +24,8 @@ export default async function Page() {
           text-foreground
             [&_ul>li::marker]:text-accent
             [&_ol>li::marker]:text-accent
-            [&_b]:text-accent"
+            [&_b]:text-accent
+            [&_hr]:border-accent"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </div>

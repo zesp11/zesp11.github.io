@@ -43,19 +43,3 @@ Projekt wykorzystuje podejście **full-stack** i jest podzielony na trzy główn
   - Wsparcie dla lokalizacji i trybu ciemnego
 
 ---
-
-## Funkcjonalności
-
-Projekt zakłada wdrożenie poniższych funkcji:
-
-- **Rejestracja i logowanie użytkowników**:
-  - Za pomocą e-maila lub mediów społecznościowych
-- **Tworzenie i zarządzanie książkami przygodowymi**:
-  - Tworzenie, edytowanie, dodawanie treści i wybory w książkach przygodowych
-  - Przeglądanie książek i historii użytkowników
-- **Powiadomienia push**:
-  - W aplikacji mobilnej
-- **Obsługa wielu języków**:
-  - Funkcjonalność lokalizacji (i18n) dla aplikacji webowej i mobilnej
-
----
