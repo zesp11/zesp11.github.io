@@ -5,6 +5,7 @@ import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
+import Footer from './components/footer';
 
 export default function Page() {
   const parallaxRef = useRef<IParallax | null>(null);
@@ -267,20 +268,26 @@ export default function Page() {
         <ParallaxLayer
           offset={3}
           speed={0.2}
-          className="grid place-content-center py-20"
           onClick={() => handleScrollToNext(0)}
+          className='flex justify-between flex-col'
         >
-          <div className="text-center px-4 text-white bg-black bg-opacity-50 py-6 rounded">
-            <h2 className="text-xl font-bold mb-6 sm:text-4xl">Gotowy do działania?</h2>
-            <p className="mb-8 sm:text-lg">
-              Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
-            </p>
-            <button
-              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
-            >
-              Rozpocznij teraz
-            </button>
+          <div
+            className="grid place-content-center py-20"
+          >
+            <div className="text-center px-4 text-white bg-black bg-opacity-50 py-6 rounded">
+              <h2 className="text-xl font-bold mb-6 sm:text-4xl">Gotowy do działania?</h2>
+              <p className="mb-8 sm:text-lg">
+                Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
+              </p>
+              <button
+                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              >
+                Rozpocznij teraz
+              </button>
+            </div>
           </div>
+
+          <Footer />
         </ParallaxLayer>
       </Parallax>
     </main >

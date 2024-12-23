@@ -43,8 +43,6 @@ export default function RootLayout({
           </div>
 
           {children}
-          {/* <main className="container mx-auto p-4 sm:mt-10">{children}</main> */}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

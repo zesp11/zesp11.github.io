@@ -4,11 +4,11 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="z-10 bg-card text-background text-center shadow-lg border-t">
-      <div className="container w-3/4 mx-auto sm:px-4 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 p-4">
+      <div className="container py-1 px-2 sm:w-3/4 mx-auto sm:px-4 lg:px-8">
+        <div className="flex flex-row justify-between items-center sm:gap-4 p-1 sm:p-4">
           {/* Links */}
-          <div className='flex gap-4 items-center'>
-            <Link href="/opis" className="hover:text-gray-800 transition-colors dark:hover:text-accent text-sm font-medium">
+          <div className='flex gap-2 sm:gap-4 items-center'>
+            <Link href="/opis" className="text-xs sm:text-md hover:text-gray-800 transition-colors dark:hover:text-accent font-medium">
               Opis Projektu
             </Link>
 
