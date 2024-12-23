@@ -14,7 +14,7 @@ export default function MouseTrail() {
       blobRef.current.animate({
         left: `${clientX - blobRef.current.offsetWidth / 2}px`,
         top: `${clientY - blobRef.current.offsetHeight / 2}px`
-      }, { duration: 3000, fill: 'forwards' })
+      }, { duration: 5000, fill: 'forwards' })
     }
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -27,7 +27,7 @@ export default function MouseTrail() {
   return (
     <div
       ref={blobRef}
-      className="fixed w-80 blur-2xl rounded-full animate-spin-slow aspect-square rotate bg-gradient-to-r dark:from-gray-900 dark:to-gray-950 from-pink-100 to-yellow-100"
+      className="fixed w-80 blur-2xl rounded-full animate-spin-slow aspect-square rotate bg-gradient-to-r from-orange-400 to-yellow-100"
     ></div>
   );
 }
