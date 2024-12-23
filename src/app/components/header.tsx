@@ -57,7 +57,7 @@ export default function Header() {
         href={"/"}
       >
         <div className="aspect-square h-6 bg-background rotate-[15deg]"></div>
-        <div className="text-xl font-bold ml-2 hidden sm:block">GoBook</div>
+        <div className="text-xl font-bold ml-2 hidden sm:block">GoAdventure</div>
       </Link>
 
       {/* Mobile menu */}

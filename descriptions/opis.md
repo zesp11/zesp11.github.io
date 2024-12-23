@@ -2,13 +2,13 @@
 
 ## Wstęp
 
-Projekt **GoBook** ma na celu stworzenie aplikacji wieloplatformowej, która umożliwi użytkownikom tworzenie, zarządzanie i odczytywanie interaktywnych książek przygodowych (gamebook). Aplikacja będzie dostępna na urządzeniach mobilnych oraz w wersji webowej. Projekt opiera się na wykorzystaniu nowoczesnych technologii, takich jak **React** do tworzenia aplikacji webowej, **Next.js** do strony opisującej projekt, **Spring Boot** jako backend oraz **Flutter** do aplikacji mobilnej.
+Projekt **GoAdventure** ma na celu stworzenie aplikacji wieloplatformowej, która umożliwi użytkownikom tworzenie, zarządzanie i odczytywanie interaktywnych książek przygodowych (gamebook). Aplikacja będzie dostępna na urządzeniach mobilnych oraz w wersji webowej. Projekt opiera się na wykorzystaniu nowoczesnych technologii, takich jak **React** do tworzenia aplikacji webowej, **Next.js** do strony opisującej projekt, **Spring Boot** jako backend oraz **Flutter** do aplikacji mobilnej.
 
 Projekt skupia się na bliskiej współpracy między członkami zespołu, którzy pracują nad różnymi komponentami systemu, zapewniając spójną integrację wszystkich technologii oraz ich funkcjonalności.
 
 ## Cel
 
-Głównym celem projektu **GoBook** jest stworzenie skalowalnej, responsywnej i intuicyjnej aplikacji, która umożliwi użytkownikom tworzenie interaktywnych książek przygodowych, które będą mogły być czytane zarówno w aplikacji mobilnej, jak i na stronie internetowej. Zespół dąży do zapewnienia doskonałej integracji między aplikacją mobilną, stroną internetową oraz backendem.
+Głównym celem projektu **GoAdventure** jest stworzenie skalowalnej, responsywnej i intuicyjnej aplikacji, która umożliwi użytkownikom tworzenie interaktywnych książek przygodowych, które będą mogły być czytane zarówno w aplikacji mobilnej, jak i na stronie internetowej. Zespół dąży do zapewnienia doskonałej integracji między aplikacją mobilną, stroną internetową oraz backendem.
 
 ---
 
