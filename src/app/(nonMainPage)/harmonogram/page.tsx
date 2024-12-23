@@ -10,7 +10,10 @@ export default async function Page() {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
 
   // Convert markdown to HTML
-  const processedContent = await remark().use(gfm).use(html).process(fileContent);
+  const processedContent = await remark()
+    .use(gfm)
+    .use(html)
+    .process(fileContent);
   const contentHtml = processedContent.toString();
 
   return (
@@ -21,7 +24,8 @@ export default async function Page() {
           text-foreground
             [&_ul>li::marker]:text-accent
             [&_ol>li::marker]:text-accent
-            [&_b]:text-accent"
+            [&_b]:text-accent
+            [&_hr]:text-accent"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </div>
