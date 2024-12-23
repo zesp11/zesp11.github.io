@@ -76,9 +76,9 @@ export default function Header() {
 
 
         <section className={`
-          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-           transition-transform absolute top-full w-52 sm:w-72 right-0 h-screen text-sm p-2 bg-background border dark:border-gray-900 dark:shadow-gray-800 border-gray-200 shadow-lg
-           `}
+  ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+  transition-transform absolute top-full w-52 sm:w-72 right-0 h-screen text-sm p-2 bg-background border dark:border-gray-900 dark:shadow-gray-800 border-gray-200 shadow-lg
+`}
           ref={navRef}
         >
           <nav className="flex flex-col gap-2">
@@ -87,9 +87,11 @@ export default function Header() {
                 href={l.url}
                 key={i}
                 className={`
-              font-semibold text-center dark:border-gray-600 border-gray-100 border-b px-3 py-1 my-1 rounded  hover:text-gray-900 hover:bg-gray-100  dark:hover:bg-gray-800 dark:hover:text-primary transition-colors duration-150
-              ${pathname === l.url ? 'bg-primary text-background' : 'dark:text-gray-200 text-gray-800'}
-              `}
+          font-semibold text-center dark:border-gray-600 border-gray-100 border-b px-3 py-1 my-1 rounded hover:text-gray-800 hover:bg-gray-100 dark:hover:bg-accent dark:hover:text-primary transition-colors duration-150
+          ${pathname === l.url
+                    ? 'bg-foreground text-background'  // Selected item colors
+                    : 'dark:foreground text-gray-800'}  // Default colors
+        `}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {l.label}
@@ -97,8 +99,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div
-            className="flex justify-end mt-2 pr-2">
+          <div className="flex justify-end mt-2 pr-2">
             <ModeToggle />
           </div>
         </section>
