@@ -27,11 +27,8 @@ export default function Page() {
             backgroundImage: "linear-gradient(0deg, #F3E8CA 50%, #FA802F 50%)",
           }}
         >
-          <h1 
-          className="absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
-          style={{
-            fontSize: "12rem",
-          }}
+          <h1
+            className="text-[21vw] absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
           >
             Zespół 11
           </h1>
@@ -57,18 +54,18 @@ export default function Page() {
           className="grid place-content-center"
           onClick={() => handleScrollToNext(1)}
         >
-          <div className="bg-black bg-opacity-60 px-6 py-8 text-center rounded space-y-4">
-            <h1 className="text-white text-4xl font-bold">
+          <div className="bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
+            <h1 className="text-white text-xl text-nowrap sm:text-4xl font-bold">
               Witaj na platformie <span className="text-accent">Zespół XI</span>
             </h1>
-            <p className="text-gray-100 text-lg max-w-md mx-auto">
+            <p className="text-gray-100 sm:text-lg max-w-md mx-auto px-2">
               Nasza platforma wspiera zespoły w realizacji wspólnych celów, łącząc
               ludzi i umożliwiając kreatywną współpracę.
             </p>
-            <div className="font-bold mb-6 text-white">
+            <div className="font-bold mb-6 text-lg sm:text-4xl text-white">
               <TypeAnimation
                 sequence={[
-                  'Integruj się ze swoim zespołem',
+                  'Integracja z zespołem',
                   1000,
                   'Twórz własne historie',
                   1000,
@@ -78,16 +75,13 @@ export default function Page() {
                   1000
                 ]}
                 wrapper="div"
-                style={{
-                  fontSize: "2rem",
-                }}
                 speed={40}
                 repeat={Infinity}
               />
             </div>
 
             <button
-              className="text-lg px-6 py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(1)}
             >
               Odkryj funkcje
@@ -95,7 +89,7 @@ export default function Page() {
           </div>
         </ParallaxLayer>
 
-
+        {/* Gamebook Creator Section */}
         <ParallaxLayer
           offset={1}
           speed={0.8}
@@ -111,7 +105,6 @@ export default function Page() {
             />
           </div>
         </ParallaxLayer>
-        {/* Gamebook Creator Section */}
         <ParallaxLayer
           offset={1}
           speed={0.4}
@@ -119,13 +112,13 @@ export default function Page() {
           onClick={() => handleScrollToNext(2)}
         >
           <div className="text-center px-4 bg-black bg-opacity-50 py-6 rounded">
-            <h2 className="text-3xl font-bold mb-6">Gamebook Creator</h2>
-            <p className="text-lg mb-4">
+            <h2 className="text-xl sm:text-4xl font-bold mb-6">Gamebook Creator</h2>
+            <p className="mb-4 sm:text-lg">
               Stwórz interaktywne książki przygodowe, które angażują graczy w pełni
               dynamiczne historie.
             </p>
             <button
-              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(2)}
             >
               Twórz teraz
@@ -146,13 +139,10 @@ export default function Page() {
         <ParallaxLayer
           offset={2}
           speed={0.5}
-          className='relative'
+          className='relative hidden sm:block'
         >
           <div className="text-accent absolute top-1/3 right-28">
             <TbTopologyStarRing size={64} />
-          </div>
-          <div className="text-accent absolute top-1/3 left-1/3">
-            <TbTopologyRing3 size={48} />
           </div>
           <div className="text-accent absolute top-10 right-1/4">
             <TbTopologyComplex size={72} />
@@ -163,7 +153,9 @@ export default function Page() {
           <div className="text-accent absolute top-20 left-1/2">
             <TbTopologyRing3 size={96} />
           </div>
-
+          <div className="text-accent absolute bottom-1/3 left-1/3">
+            <TbTopologyRing2 size={72} />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -177,8 +169,8 @@ export default function Page() {
           <div className="text-accent absolute top-1/4 right-1/4">
             <TbTopologyComplex size={48} />
           </div>
-          <div className="text-accent absolute bottom-1/3 left-1/3">
-            <TbTopologyRing2 size={72} />
+          <div className="text-accent absolute top-1/3 left-1/3">
+            <TbTopologyRing3 size={48} />
           </div>
           <div className="text-accent absolute top-1/4 right-3/4">
             <TbTopologyStarRing2 size={88} />
@@ -191,7 +183,7 @@ export default function Page() {
         <ParallaxLayer
           offset={2}
           speed={0.8}
-          className='relative'
+          className='relative hidden sm:block'
         >
           <div className="text-accent absolute bottom-8 right-1/2">
             <TbTopologyComplex size={54} />
@@ -210,17 +202,15 @@ export default function Page() {
         <ParallaxLayer
           offset={2}
           speed={1.1}
-          className='relative flex justify-end items-center pr-8'
+          className='relative flex justify-end md:block items-center pr-8'
         >
-          <div>
-            <Image
-              src={'zesp11_page/phone.png'}
-              alt=''
-              width={400}
-              height={300}
-              className='h-3/5 w-auto animate-floating'
-            />
-          </div>
+          <Image
+            src={'zesp11_page/phone.png'}
+            alt=''
+            width={400}
+            height={300}
+            className='h-72 w-auto sm:w-[25vw] lg:w-[20vw] md:absolute md:top-1/3 lg:top-1/4 md:right-1/4 sm:h-auto animate-floating'
+          />
         </ParallaxLayer>
 
 
@@ -231,13 +221,13 @@ export default function Page() {
           onClick={() => handleScrollToNext(3)}
         >
           <div className="bg-black bg-opacity-50 px-4 py-6 rounded text-center">
-            <h2 className="text-3xl font-bold mb-6">Aplikacja Mobilna</h2>
-            <p className="text-lg mb-4">
+            <h2 className="text-xl sm:text-4xl font-bold mb-6">Aplikacja Mobilna</h2>
+            <p className="mb-4 sm:text-lg">
               Zawsze miej swoje książki przygodowe pod ręką dzięki naszej aplikacji
               mobilnej.
             </p>
             <button
-              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
               onClick={() => handleScrollToNext(3)}
             >
               Pobierz aplikację
@@ -281,12 +271,12 @@ export default function Page() {
           onClick={() => handleScrollToNext(0)}
         >
           <div className="text-center px-4 text-white bg-black bg-opacity-50 py-6 rounded">
-            <h2 className="text-3xl font-bold mb-6">Gotowy do działania?</h2>
-            <p className="text-lg mb-8">
+            <h2 className="text-xl font-bold mb-6 sm:text-4xl">Gotowy do działania?</h2>
+            <p className="mb-8 sm:text-lg">
               Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
             </p>
             <button
-              className="px-6 py-3 bg-accent hover:bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
             >
               Rozpocznij teraz
             </button>
