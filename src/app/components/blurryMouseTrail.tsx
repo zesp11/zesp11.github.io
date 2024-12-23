@@ -27,7 +27,7 @@ export default function MouseTrail() {
   return (
     <div
       ref={blobRef}
-      className="fixed w-80 blur-2xl rounded-full animate-spin-slow aspect-square rotate bg-gradient-to-r from-orange-300 to-yellow-100"
+      className="fixed w-80 blur-2xl rounded-full animate-spin-slow aspect-square rotate bg-gradient-to-r from-orange-200 to-orange-100"
     ></div>
   );
 }
