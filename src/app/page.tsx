@@ -133,7 +133,7 @@ export default function Page() {
           speed={0.8}
           className="relative grid place-content-center"
           style={{
-            backgroundImage: "linear-gradient(12deg, #F3E8CA 20%, #9C8B73 50%, #9C8B73 50%, #F3E8CA 80%)",
+            backgroundImage: "linear-gradient(11deg, #F3E8CA 28%, #9C8B73 50%, #9C8B73 50%, #F3E8CA 67%)",
           }}
         >
         </ParallaxLayer>
