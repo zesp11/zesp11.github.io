@@ -1,12 +1,15 @@
 'use client';
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2 } from "react-icons/tb";
+import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2, TbDownload } from "react-icons/tb";
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Footer from './components/footer';
 import { Montserrat } from "next/font/google";
+import Link from 'next/link';
+import { FaCompass, FaFeatherAlt } from 'react-icons/fa';
+import { FaWandSparkles } from "react-icons/fa6";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -76,23 +79,22 @@ export default function Page() {
         >
           <div className="bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
             <h1 className="text-white text-xl text-nowrap sm:text-4xl font-bold">
-              Witaj na platformie <span className="text-accent">Zespół XI</span>
+              Witamy na stronie <span className="text-accent">Zespołu XI</span>
             </h1>
-            <p className="text-gray-100 sm:text-lg max-w-md mx-auto px-2">
-              Nasza platforma wspiera zespoły w realizacji wspólnych celów, łącząc
-              ludzi i umożliwiając kreatywną współpracę.
+            <p className="text-gray-100 sm:text-lg max-w-lg mx-auto px-2">
+              Nasz projekt ułatwia integrację w zespole dzięki wspólnemu odkrywaniu opowieści, poznawaniu nowych miejsc i budowie świata na podstawie podejmowanych decyzji.
             </p>
-            <div className="font-bold mb-6 text-lg sm:text-4xl text-white">
+            <div className="font-bold mb-6 text-lg sm:text-3xl text-white">
               <TypeAnimation
                 sequence={[
-                  'Integracja z zespołem',
-                  1000,
-                  'Twórz własne historie',
-                  1000,
-                  'Poznawaj nowe miejsca',
-                  1000,
-                  'Spotykaj nowych ludzi',
-                  1000
+                  'Zintegruj się z zespołem!',
+                  1500,
+                  'Twórz wyjątkowe historie!',
+                  1500,
+                  'Odkrywaj nowe miejsca!',
+                  1500,
+                  'Poznawaj inspirujących ludzi!',
+                  1500
                 ]}
                 wrapper="div"
                 speed={40}
@@ -100,12 +102,17 @@ export default function Page() {
               />
             </div>
 
-            <button
-              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
-              onClick={() => handleScrollToNext(1)}
-            >
-              Odkryj funkcje
-            </button>
+            <div className='flex justify-center items-center'>
+              <button
+                className="flex items-center gap-2 sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
+                onClick={() => handleScrollToNext(1)}
+              >
+                <span>
+                  Zacznij odkrywać!
+                </span>
+                <FaCompass size={24} />
+              </button>
+            </div>
           </div>
         </ParallaxLayer>
 
@@ -137,12 +144,15 @@ export default function Page() {
               Stwórz interaktywne książki przygodowe, które angażują graczy w pełni
               dynamiczne historie.
             </p>
-            <button
-              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
-              onClick={() => handleScrollToNext(2)}
-            >
-              Twórz teraz
-            </button>
+            <div className='flex justify-center'>
+              <button
+                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                onClick={() => handleScrollToNext(2)}
+              >
+                <span>Twórz teraz</span>
+                <FaWandSparkles size={24}/>
+              </button>
+            </div>
           </div>
         </ParallaxLayer>
 
@@ -246,12 +256,16 @@ export default function Page() {
               Zawsze miej swoje książki przygodowe pod ręką dzięki naszej aplikacji
               mobilnej.
             </p>
-            <button
-              className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
-              onClick={() => handleScrollToNext(3)}
-            >
-              Pobierz aplikację
-            </button>
+
+            <div className='flex justify-center'>
+              <button
+                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                onClick={() => handleScrollToNext(3)}
+              >
+                <TbDownload className="text-white" size={20} />
+                <span>Pobierz aplikację</span>
+              </button>
+            </div>
           </div>
         </ParallaxLayer>
 
@@ -287,7 +301,6 @@ export default function Page() {
         <ParallaxLayer
           offset={3}
           speed={0.2}
-          onClick={() => handleScrollToNext(0)}
           className='flex justify-between flex-col'
         >
           <div
@@ -298,11 +311,16 @@ export default function Page() {
               <p className="mb-8 sm:text-lg">
                 Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
               </p>
-              <button
-                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300"
-              >
-                Rozpocznij teraz
-              </button>
+
+              <div className='flex justify-center'>
+                <Link
+                  className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                  href="/opis"
+                >
+                  <span>Rozpocznij teraz</span>
+                  <FaFeatherAlt size={24}/>
+                </Link>
+              </div>
             </div>
           </div>
 
