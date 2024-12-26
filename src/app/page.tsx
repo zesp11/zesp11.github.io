@@ -35,6 +35,13 @@ export default function Page() {
             backgroundImage: "linear-gradient(0deg, #F3E8CA 50%, #FA802F 50%)",
           }}
         >
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
+          speed={0.5}
+          className='relative grid place-content-center h-full'
+        >
           <h1
             className="text-[21vw] lg:text-[18vw] absolute top-10 left-1/2 -translate-x-1/2 text-white font-bold text-center text-nowrap"
             style={{
@@ -45,6 +52,7 @@ export default function Page() {
             Zespół 11
           </h1>
         </ParallaxLayer>
+
         <ParallaxLayer
           offset={0}
           speed={0.2}
