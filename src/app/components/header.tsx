@@ -11,6 +11,7 @@ const links = [
   { url: "/harmonogram", label: "Harmonogram" },
   { url: "/zespol", label: "Zespół" },
   { url: "/opis", label: "Opis Projektu" },
+  { url: "/docs", label: "Dokumentacja" },
 ];
 
 export default function Header() {
