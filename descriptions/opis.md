@@ -72,5 +72,5 @@ Projekt składa się z trzech głównych komponentów:
 
 ---
 
-# Podsumowanie
+## Podsumowanie
 Projekt **GoAdventure** oferuje wyjątkowe połączenie kreatywnej narracji, eksploracji miejskiej i współpracy zespołowej. Jego innowacyjność polega na integracji nowoczesnych technologii z fizycznym światem graczy, co czyni każdą przygodę niepowtarzalną. Dzięki Gamebook Creator twórcy mogą w łatwy sposób projektować złożone historie, a aplikacja mobilna Gamebook Explorer zapewnia graczom dynamiczne doświadczenia w terenie.
