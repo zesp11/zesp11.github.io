@@ -27,9 +27,8 @@ Gamebook Creator umożliwia tworzenie i edytowanie interaktywnych historii, okre
 Projekt składa się z trzech głównych komponentów:
 
 ### 1. Aplikacja Mobilna
-
-- **Technologia**: Flutter
 - umożliwia zespołom graczy uczestniczenie w rozgrywkach w oparciu o stworzone wcześniej gamebooki.
+- **Technologia**: Flutter
 
   **Główne funkcje**:
 
@@ -41,9 +40,8 @@ Projekt składa się z trzech głównych komponentów:
 
 
 ### 2. Aplikacja webowa (Gamebook creator)
-
-- **Technologia**: React z Next.js
 - Narzędzie webowe umożliwiające użytkownikom tworzenie własnych interaktywnych książek przygodowych, które później można eksplorować za pomocą aplikacji mobilnej.
+- **Technologia**: React z Next.js
 
   **Główne funkcje**:
   - **Tworzenie i edycja gamebooków decyzji**  
@@ -59,9 +57,8 @@ Projekt składa się z trzech głównych komponentów:
 
 
 ### 3. Backend
-
-- **Technologia**: Java + Spring Boot + PostgreSQL
 - trzon systemu, zarządzając danymi i logiką gry oraz zapewniając płynną integrację między aplikacjami mobilnymi i webowymi.
+- **Technologia**: Java + Spring Boot + PostgreSQL
 
   **Główne funkcje**:
 
