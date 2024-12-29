@@ -122,7 +122,7 @@ export default function Page() {
           speed={0.8}
           className='relative flex justify-end items-center pr-8'
         >
-          <div>
+          <div className='lg:absolute lg:left-1/3 lg:ml-16'>
             <Image
               src={'zesp11_page/creator-usage.webp'}
               alt=''
