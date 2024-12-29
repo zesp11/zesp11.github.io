@@ -80,7 +80,10 @@ export default async function Page() {
 
   return (
     <>
-      <MouseTrail />
+      <div className='hidden sm:block'>
+        <MouseTrail />
+      </div>
+
       <section className="p-1 mt-10 mx-auto sm:max-w-4xl">
         <div className="flex justify-center">
           <h1 className="z-10 text-2xl font-bold mb-4">Zespół XI</h1>
