@@ -52,12 +52,12 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <header className={`z-50 shadow dark:text-background dark:bg-card flex justify-between items-center p-1 sm:p-4 w-screen transform transition-transform duration-200 fixed ${isHeaderVisible ? "translate-y-0" : '-translate-y-full'}`}>
+    <header className={`z-50 shadow text-background bg-foreground dark:text-primary dark:bg-card flex justify-between items-center p-1 sm:p-4 w-screen transform transition-transform duration-200 fixed ${isHeaderVisible ? "translate-y-0" : '-translate-y-full'}`}>
       <Link
         className="p-1 flex gap-1"
         href={"/"}
       >
-        <div className="aspect-square h-6 bg-background rotate-[15deg]"></div>
+        <div className="aspect-square h-6 bg-background dark:bg-primary rotate-[15deg]"></div>
         <div className="text-xl font-bold ml-2 hidden sm:block">GoAdventure</div>
       </Link>
 
@@ -78,7 +78,7 @@ export default function Header() {
 
         <section className={`
   ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-  transition-transform absolute top-full w-52 sm:w-72 right-0 h-screen text-sm p-2 bg-background border dark:border-gray-900 dark:shadow-gray-800 border-gray-200 shadow-lg
+  transition-transform absolute top-full w-52 sm:w-72 right-0 h-screen text-sm p-2 bg-background border border-gray-900 shadow-gray-800 shadow-lg
 `}
           ref={navRef}
         >
@@ -88,9 +88,9 @@ export default function Header() {
                 href={l.url}
                 key={i}
                 className={`
-          font-semibold text-center dark:border-gray-600 border-gray-100 border-b px-3 py-1 my-1 rounded hover:text-gray-800 hover:bg-gray-100 dark:hover:bg-accent dark:hover:text-primary transition-colors duration-150
+          font-semibold text-center border-gray-600 border-b px-3 py-1 my-1 rounded hover:bg-accent dark:text-primary hover:text-primary transition-colors duration-150
           ${pathname === l.url
-                    ? 'bg-foreground text-background'  // Selected item colors
+                    ? 'dark:text-background bg-foreground text-background'  // Selected item colors
                     : 'dark:foreground text-gray-800'}  // Default colors
         `}
                 onClick={() => setIsMenuOpen(false)}

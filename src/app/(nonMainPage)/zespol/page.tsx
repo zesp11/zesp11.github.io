@@ -1,4 +1,4 @@
-import MouseTrail from '@/app/components/blurryMouseTrail';
+import Markdown from '@/app/components/markdown';
 import MemberCard from '@/app/components/memberCard';
 import fs from 'fs';
 import path from 'path';
@@ -80,9 +80,9 @@ export default async function Page() {
 
   return (
     <>
-      <div className='hidden sm:block'>
+      {/* <div className='hidden sm:block'>
         <MouseTrail />
-      </div>
+      </div> */}
 
       <section className="p-1 mt-10 mx-auto sm:max-w-4xl">
         <div className="flex justify-center">
@@ -105,15 +105,7 @@ export default async function Page() {
       </section>
       <section className='container mx-auto my-4 z-10'>
         <div className='flex justify-center'>
-          <article
-            className="z-10 markdown-content my-10 prose prose-sm sm:prose-base lg:max-w-2xl 
-          text-foreground
-            [&_ul>li::marker]:text-accent
-            [&_ol>li::marker]:text-accent
-            [&_b]:text-accent
-            [&_hr]:border-accent"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+         <Markdown content={contentHtml}/>
         </div>
       </section>
     </>

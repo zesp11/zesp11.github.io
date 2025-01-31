@@ -1,3 +1,4 @@
+import Markdown from '@/app/components/markdown';
 import fs from 'fs';
 import path from 'path';
 import { remark } from 'remark';
@@ -19,15 +20,7 @@ export default async function Page() {
   return (
     <div className='container mx-auto my-4'>
       <div className='flex justify-center'>
-        <article
-          className="markdown-content my-10 prose prose-sm sm:prose-base lg:max-w-2xl 
-          text-foreground
-            [&_ul>li::marker]:text-accent
-            [&_ol>li::marker]:text-accent
-            [&_b]:text-accent
-            [&_hr]:border-accent"
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
+        <Markdown content={contentHtml}/>
       </div>
     </div >
   );

@@ -59,7 +59,8 @@ export default {
 			animation: {
 				'spin-slow': 'spin 20s linear infinite',
 				'ping-spin': 'ping-spin 3s infinite',
-				floating: 'floating 3s ease-in-out infinite',
+				'floating': 'floating 3s ease-in-out infinite',
+				'shine-once': 'shine 8s linear 1',
 			},
 			keyframes: {
 				spin: {
@@ -87,6 +88,14 @@ export default {
 					'0%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-15px)' },
 					'100%': { transform: 'translateY(0)' },
+				},
+				shine: {
+					from: {
+						'background-position': '0% center',
+					},
+					to: {
+						'background-position': '200% center',
+					},
 				},
 			},
 		}
