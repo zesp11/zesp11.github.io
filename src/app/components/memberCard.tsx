@@ -10,48 +10,62 @@ interface MemberCardProps {
 export default function MemberCard({ member, isLeader }: MemberCardProps) {
   return (
     <div
-      className={`flex flex-col items-center p-4 rounded-lg transition-transform duration-300 
+      className={`flex flex-col items-center p-6 rounded-xl transition-all duration-300 
         ${isLeader
-          ? "border-4 border-black dark:border-accent"
-          : "border border-gray-300 dark:border-gray-600"
+          ? "border-4 border-accent/80 shadow-lg shadow-accent/20 dark:border-[##fa802f] dark:shadow-[#fa802f]/30"
+          : "border border-accent/20 dark:border-[#30363d]"
         } 
-        bg-white dark:bg-[#322505]
-        shadow-md dark:shadow-xl
-        hover:scale-[1.012] hover:shadow-xl
-        bg-opacity-90 dark:bg-opacity-20
+       
+        bg-gradient-to-br from-foreground/20 to-foreground/30 dark:from-accent/10 dark:to-background/20
+        dark:bg-[#0d1117]
+        backdrop-blur-lg
+        hover:shadow-xl
+        relative
+        overflow-hidden
+        group
+        hover:animate-shine-once
         `}
     >
-      {/* Display the member's photo or a placeholder */}
-      {member.photo ? (
-        <Image
-          src={member.photo}
-          alt={`${member.firstName} ${member.lastName}`}
-          width={100}
-          height={100}
-          className="rounded-full transition-transform duration-300 hover:scale-110"
-        />
-      ) : (
-        <div className="bg-gray-200 dark:bg-gray-700 rounded-full w-24 h-24 flex items-center justify-center">
-          <span className="text-gray-500 dark:text-gray-400 text-xl">
-            {member.firstName[0]}
-            {member.lastName[0]}
-          </span>
-        </div>
-      )}
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:via-[#fa802f]/20" />
+
+      {/* Member photo */}
+      <div className="p-1 rounded-full bg-gradient-to-br from-accent/10 to-background/20 dark:from-[#161b22] dark:to-[#0d1117] backdrop-blur-md">
+        {member.photo ? (
+          <Image
+            src={member.photo}
+            alt={`${member.firstName} ${member.lastName}`}
+            width={112}
+            height={112}
+            className="rounded-full transition-transform duration-300 hover:scale-110 w-24 h-24 object-cover border-2 border-accent/20 dark:border-[#30363d]"
+          />
+        ) : (
+          <div className="w-24 h-24 rounded-full flex items-center justify-center bg-background/40 dark:bg-[#161b22] backdrop-blur-sm border border-accent/10 dark:border-[#30363d]">
+            <span className="text-[hsl(var(--foreground)/0.9)] dark:text-[hsl(var(--foreground))] text-2xl font-medium tracking-tighter">
+              {member.firstName[0]}
+              {member.lastName[0]}
+            </span>
+          </div>
+        )}
+      </div>
+
       {/* Name */}
-      <h3 className="text-lg font-semibold mt-4 text-black dark:text-foreground transition-colors duration-300 hover:text-gray-700">
+      <h3 className="text-xl font-semibold mt-4 bg-gradient-to-r from-[#FA802F] to-[#322505] dark:from-[#FA802F] dark:to-[#f3e8ca] bg-clip-text text-transparent">
         {member.firstName} {member.lastName}
       </h3>
+
       {/* Icons */}
-      <div className="flex gap-4 mt-2">
+      <div className="flex gap-4 mt-3">
         {member.github && (
-          <a href={member.github} target="_blank" rel="noopener noreferrer">
-            <AiFillGithub className="text-gray-700 dark:text-gray-700 hover:text-accent dark:hover:text-foreground text-2xl transition-colors duration-300" size={32} />
+          <a href={member.github} target="_blank" rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-background/20 hover:bg-accent/20 dark:bg-[#161b22] dark:hover:bg-[#fa802f]/30 transition-colors shadow-sm">
+            <AiFillGithub className="text-foreground/70 hover:text-accent dark:text-[#c9d1d9] dark:hover:text-[#58a6ff] text-2xl" size={28} />
           </a>
         )}
         {member.linkedin && (
-          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-            <AiFillLinkedin className="text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-500 text-2xl transition-colors duration-300" size={32} />
+          <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-background/20 hover:bg-blue-400/20 dark:bg-[#161b22] dark:hover:bg-[#0d1117] transition-colors shadow-sm">
+            <AiFillLinkedin className="text-foreground/70 hover:text-blue-600 dark:text-[#c9d1d9] dark:hover:text-[#58a6ff] text-2xl" size={28} />
           </a>
         )}
       </div>

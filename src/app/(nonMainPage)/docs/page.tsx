@@ -1,32 +1,37 @@
-export default function Page() {
+import Markdown from "@/app/components/markdown";
+import { remark } from 'remark';
+import gfm from 'remark-gfm';
+import html from 'remark-html';
+
+export default async function Page() {
+  const content = `
+  # Informacja o dokumentacji
+  
+  Dokumentacja projektu zostanie opublikowana po zakończeniu prac nad projektem. 
+  Szczegóły techniczne i procesowe będą dostępne w finalnej wersji dokumentacji.
+  
+  ## Raporty projektu
+  
+  - **Raport semestralny** zostanie udostępniony w trakcie trwania prac nad projektem.
+  - **Raport końcowy** zostanie opublikowany po zakończeniu projektu.
+  
+  Szczegółowe informacje będą dostępne w odpowiednich raportach.
+    `;
+  const processedContent = await remark()
+    .use(gfm)
+    .use(html)
+    .process(content);
+  const contentHtml = processedContent.toString();
+
+
+
   return (
     <div className='container mx-auto my-4'>
       <div className='flex justify-center'>
-        <article
-          className="markdown-content my-10 prose prose-sm sm:prose-base lg:max-w-2xl 
-          text-foreground
-            [&_ul>li::marker]:text-accent
-            [&_ol>li::marker]:text-accent
-            [&_b]:text-accent
-            [&_hr]:border-accent"
-        >
-          <h1 className="text-4xl font-bold mb-4">Informacja o dokumentacji</h1>
-          <p className="mb-6">
-            Dokumentacja projektu zostanie opublikowana po zakończeniu prac nad projektem.
-            Szczegóły techniczne i procesowe będą dostępne w finalnej wersji dokumentacji.
-          </p>
-          <h2 className="text-secondary text-2xl font-semibold mb-3">Raporty projektu</h2>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Raport semestralny</strong> zostanie udostępniony w trakcie trwania prac nad projektem.</li>
-            <li><strong>Raport końcowy</strong> zostanie opublikowany po zakończeniu projektu.</li>
-          </ul>
-          <p className="mt-6">
-            Szczegółowe informacje będą dostępne w odpowiednich raportach.
-          </p>
-        </article>
-
+        <Markdown content={contentHtml} />
       </div>
-    </div >
+    </div>
   );
+
 
 }

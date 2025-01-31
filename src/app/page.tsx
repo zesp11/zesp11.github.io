@@ -35,10 +35,10 @@ export default function Page() {
           speed={2}
           className="relative grid place-content-center h-full"
           style={{
-            backgroundImage: "linear-gradient(0deg, #F3E8CA 50%, #FA802F 50%)",
+            backgroundImage: "linear-gradient(0deg, hsl(var(--background)) 50%, #FA802F 50%)",
           }}
-        >
-        </ParallaxLayer>
+        />
+
 
         <ParallaxLayer
           offset={0}
@@ -150,22 +150,21 @@ export default function Page() {
                 onClick={() => handleScrollToNext(2)}
               >
                 <span>Twórz teraz</span>
-                <FaWandSparkles size={24}/>
+                <FaWandSparkles size={24} />
               </button>
             </div>
           </div>
         </ParallaxLayer>
 
         {/* Mobile App Section */}
+
         <ParallaxLayer
           offset={2}
           speed={0.8}
-          className="relative grid place-content-center"
-          style={{
-            backgroundImage: "linear-gradient(11deg, #F3E8CA 28%, #9C8B73 50%, #9C8B73 50%, #F3E8CA 67%)",
-          }}
-        >
-        </ParallaxLayer>
+          className="relative grid place-content-center 
+    bg-[linear-gradient(11deg,hsl(var(--background))_28%,#9C8B73_50%,#9C8B73_50%,hsl(var(--background))_67%)]
+    dark:bg-[linear-gradient(11deg,hsl(var(--background))_28%,#21262d_50%,#21262d_50%,hsl(var(--background))_67%)]"
+        />
         <ParallaxLayer
           offset={2}
           speed={0.5}
@@ -318,7 +317,7 @@ export default function Page() {
                   href="/opis"
                 >
                   <span>Rozpocznij teraz</span>
-                  <FaFeatherAlt size={24}/>
+                  <FaFeatherAlt size={24} />
                 </Link>
               </div>
             </div>
