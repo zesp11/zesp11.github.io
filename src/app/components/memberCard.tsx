@@ -27,8 +27,17 @@ export default function MemberCard({ member, isLeader }: MemberCardProps) {
         `}
     >
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:via-[#fa802f]/20" />
-
+      <div
+        className="absolute inset-0 pointer-events-none 
+             bg-gradient-to-br 
+             from-transparent 
+             via-black/25 
+             to-transparent 
+             opacity-0 
+             group-hover:opacity-100 
+             transition-opacity duration-300 
+             dark:via-[#fa802f]/20"
+      />
       {/* Member photo */}
       <div className="p-1 rounded-full bg-gradient-to-br from-accent/10 to-background/20 dark:from-[#161b22] dark:to-[#0d1117] backdrop-blur-md">
         {member.photo ? (
@@ -57,15 +66,29 @@ export default function MemberCard({ member, isLeader }: MemberCardProps) {
       {/* Icons */}
       <div className="flex gap-4 mt-3">
         {member.github && (
-          <a href={member.github} target="_blank" rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-background/20 hover:bg-accent/20 dark:bg-[#161b22] dark:hover:bg-[#fa802f]/30 transition-colors shadow-sm">
-            <AiFillGithub className="text-foreground/70 hover:text-accent dark:text-[#c9d1d9] dark:hover:text-[#58a6ff] text-2xl" size={28} />
+          <a
+            href={member.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-background/20 hover:bg-accent/20 dark:bg-[#161b22] dark:hover:bg-[#fa802f]/30 transition-colors shadow-sm"
+          >
+            <AiFillGithub
+              className="text-[#181717] dark:text-[#c9d1d9] hover:text-black dark:hover:text-white transition-colors duration-300 text-2xl"
+              size={28}
+            />
           </a>
         )}
         {member.linkedin && (
-          <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-background/20 hover:bg-blue-400/20 dark:bg-[#161b22] dark:hover:bg-[#0d1117] transition-colors shadow-sm">
-            <AiFillLinkedin className="text-foreground/70 hover:text-blue-600 dark:text-[#c9d1d9] dark:hover:text-[#58a6ff] text-2xl" size={28} />
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-background/20 hover:bg-blue-400/20 dark:bg-[#161b22] dark:hover:bg-[#0d1117] transition-colors shadow-sm"
+          >
+            <AiFillLinkedin
+              className="text-[#0077B5] hover:text-[#005582] transition-colors duration-300 text-2xl"
+              size={28}
+            />
           </a>
         )}
       </div>
