@@ -9,6 +9,7 @@ export default function Markdown({ content }: { content: string }) {
           [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-primary [&_h2]:relative [&_h2]:pl-3
           [&_h2]:before:absolute [&_h2]:before:left-0 [&_h2]:before:w-1 [&_h2]:before:h-full [&_h2]:before:bg-accent
           [&_h3]:text-xl [&_h3]:font-medium [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-primary
+          [&_h4]:text-lg [&_h4]:font-medium [&_h4]:mt-4 [&_h4]:mb-2 [&_h4]:text-primary
           
           /* Lists - properly aligned arrows */
           [&_ul]:list-none [&_ul]:my-4 [&_ul>li]:relative [&_ul>li]:pl-6 
