@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import Footer from './components/footer';
 import { Montserrat } from "next/font/google";
 import Link from 'next/link';
-import { FaCompass, FaFeatherAlt } from 'react-icons/fa';
+import { FaChevronDown, FaCompass, FaFeatherAlt } from 'react-icons/fa';
 import { FaWandSparkles } from "react-icons/fa6";
 
 const montserrat = Montserrat({
@@ -75,7 +75,6 @@ export default function Page() {
           offset={0}
           speed={0.3}
           className="grid place-content-center"
-          onClick={() => handleScrollToNext(1)}
         >
           <div className="bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
             <h1 className="text-white text-xl text-nowrap sm:text-4xl font-bold">
@@ -114,6 +113,8 @@ export default function Page() {
               </button>
             </div>
           </div>
+
+          <ScrollIndicatorCentered onClick={() => handleScrollToNext(1)}/>
         </ParallaxLayer>
 
         {/* Gamebook Creator Section */}
@@ -136,7 +137,6 @@ export default function Page() {
           offset={1}
           speed={0.4}
           className="grid place-content-center text-white py-20"
-          onClick={() => handleScrollToNext(2)}
         >
           <div className="text-center px-4 bg-black bg-opacity-50 py-6 rounded">
             <h2 className="text-xl sm:text-4xl font-bold mb-6">Gamebook Creator</h2>
@@ -154,6 +154,8 @@ export default function Page() {
               </button>
             </div>
           </div>
+
+          <ScrollIndicatorCentered onClick={() => handleScrollToNext(2)}/>
         </ParallaxLayer>
 
         {/* Mobile App Section */}
@@ -247,7 +249,6 @@ export default function Page() {
           offset={2}
           speed={0.3}
           className="text-white py-20 grid place-content-center"
-          onClick={() => handleScrollToNext(3)}
         >
           <div className="bg-black bg-opacity-50 px-4 py-6 rounded text-center">
             <h2 className="text-xl sm:text-4xl font-bold mb-6">Aplikacja Mobilna</h2>
@@ -266,6 +267,8 @@ export default function Page() {
               </button>
             </div>
           </div>
+
+          <ScrollIndicatorCentered onClick={() => handleScrollToNext(3)}/>
         </ParallaxLayer>
 
 
@@ -327,5 +330,26 @@ export default function Page() {
         </ParallaxLayer>
       </Parallax>
     </main >
+  );
+}
+
+function ScrollIndicator({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="absolute bottom-8 animate-bounce flex flex-col items-center hover:text-black text-gray-800 dark:text-white/60 dark:hover:text-white transition-colors"
+    >
+      <span className="text-sm mb-2">Przewiń w dół</span>
+      <FaChevronDown className="text-2xl" />
+    </button>
+  );
+}
+
+function ScrollIndicatorCentered({onClick}: {onClick: () => void}) {
+  return (
+    <div className='flex justify-center'>
+      <ScrollIndicator onClick={onClick}/>
+    </div>
+
   );
 }
