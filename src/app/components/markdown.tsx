@@ -3,6 +3,8 @@ export default function Markdown({ content }: { content: string }) {
   return (
     <article
       className="markdown-content my-10 prose prose-sm sm:prose-base md:prose-lg lg:max-w-4xl
+      [&_td:last-child]:whitespace-nowrap
+      [&_td:last-child]:pr-4
           text-foreground
           /* Headers */
           [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:mb-6 [&_h1]:border-b-2 [&_h1]:pb-2 [&_h1]:border-accent [&_h1]:text-primary

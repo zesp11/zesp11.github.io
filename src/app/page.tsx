@@ -1,7 +1,7 @@
 'use client';
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2, TbDownload, TbDeviceMobile, TbCloud } from "react-icons/tb";
+import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyStarRing2, TbDownload, TbDeviceMobile, TbCloud } from "react-icons/tb";
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -68,7 +68,7 @@ export default function Page() {
             {/* Image container */}
             <div className='relative z-10 grid place-content-center'>
               <Image
-                src={'zesp11_page/main.png'}
+                src={'main.png'}
                 alt='Team collaboration illustration'
                 width={800}
                 height={600}
@@ -134,7 +134,7 @@ export default function Page() {
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-accent/10 blur-3xl rounded-full scale-125 origin-center" />
 
             <Image
-              src={'zesp11_page/creator-usage.webp'}
+              src={'creator-usage.webp'}
               alt="Gamebook creator interface preview"
               width={600}
               height={450}
@@ -286,7 +286,7 @@ export default function Page() {
           className='relative flex justify-end md:block items-center pr-8'
         >
           <Image
-            src={'zesp11_page/phone.png'}
+            src={'phone.png'}
             alt=''
             width={400}
             height={300}
@@ -349,7 +349,7 @@ export default function Page() {
           offset={3}
           speed={0.1}
           style={{
-            backgroundImage: "url('zesp11_page/logos.png')",
+            backgroundImage: "url('logos.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
@@ -358,7 +358,7 @@ export default function Page() {
           offset={3}
           speed={0.9}
           style={{
-            backgroundImage: "url('zesp11_page/clouds.png')",
+            backgroundImage: "url('clouds.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
@@ -367,7 +367,7 @@ export default function Page() {
           offset={3}
           speed={1.3}
           style={{
-            backgroundImage: "url('zesp11_page/hero.png')",
+            backgroundImage: "url('hero.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
