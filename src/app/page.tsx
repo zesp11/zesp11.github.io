@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import Footer from './components/footer';
 import { Montserrat } from "next/font/google";
 import Link from 'next/link';
-import { FaArrowRight, FaCheckCircle, FaChevronDown, FaCompass, FaFeatherAlt, FaMagic } from 'react-icons/fa';
+import { FaCheckCircle, FaChevronDown, FaCompass, FaFeatherAlt } from 'react-icons/fa';
 import { FaWandSparkles } from "react-icons/fa6";
 
 const montserrat = Montserrat({
@@ -230,9 +230,6 @@ export default function Page() {
           </div>
           <div className="text-accent absolute top-10 right-1/4">
             <TbTopologyComplex size={72} />
-          </div>
-          <div className="text-accent absolute bottom-10 left-1/10">
-            <TbTopologyBus size={56} />
           </div>
           <div className="text-accent absolute top-20 left-1/2">
             <TbTopologyRing3 size={96} />
