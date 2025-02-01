@@ -1,14 +1,14 @@
 'use client';
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2, TbDownload } from "react-icons/tb";
+import { TbTopologyStarRing, TbTopologyComplex, TbTopologyRing2, TbTopologyRing3, TbTopologyBus, TbTopologyStarRing2, TbDownload, TbDeviceMobile, TbCloud } from "react-icons/tb";
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Footer from './components/footer';
 import { Montserrat } from "next/font/google";
 import Link from 'next/link';
-import { FaChevronDown, FaCompass, FaFeatherAlt } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle, FaChevronDown, FaCompass, FaFeatherAlt, FaMagic } from 'react-icons/fa';
 import { FaWandSparkles } from "react-icons/fa6";
 
 const montserrat = Montserrat({
@@ -61,14 +61,20 @@ export default function Page() {
           speed={0.2}
           className='relative grid place-content-center'
         >
-          <div className=''>
-            <Image
-              src={'zesp11_page/main.png'}
-              alt=''
-              width={400}
-              height={300}
-              className='h-auto w-full animate-floating'
-            />
+          <div className='relative w-full max-w-2xl mx-auto'>
+            {/* Blurred background */}
+            <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full -translate-y-1/3 scale-125" />
+
+            {/* Image container */}
+            <div className='relative z-10 grid place-content-center'>
+              <Image
+                src={'zesp11_page/main.png'}
+                alt='Team collaboration illustration'
+                width={800}
+                height={600}
+                className='h-auto w-full lg:min-w-max animate-floating drop-shadow-2xl'
+              />
+            </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
@@ -76,7 +82,7 @@ export default function Page() {
           speed={0.3}
           className="grid place-content-center"
         >
-          <div className="bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
+          <div className="backdrop-blur-sm bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
             <h1 className="text-white text-xl text-nowrap sm:text-4xl font-bold">
               Witamy na stronie <span className="text-accent">Zespołu XI</span>
             </h1>
@@ -114,48 +120,95 @@ export default function Page() {
             </div>
           </div>
 
-          <ScrollIndicatorCentered onClick={() => handleScrollToNext(1)}/>
+          <ScrollIndicatorCentered onClick={() => handleScrollToNext(1)} />
         </ParallaxLayer>
 
         {/* Gamebook Creator Section */}
         <ParallaxLayer
           offset={1}
           speed={0.8}
-          className='relative flex justify-end items-center pr-8'
+          className="relative flex justify-end items-center pr-8"
         >
-          <div className='lg:absolute lg:left-1/3 lg:ml-16'>
+          <div className="lg:absolute lg:right-36 lg:ml-16 relative">
+            {/* Centered accent background glow */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-accent/10 blur-3xl rounded-full scale-125 origin-center" />
+
             <Image
               src={'zesp11_page/creator-usage.webp'}
-              alt=''
-              width={400}
-              height={300}
-              className='h-1/4 w-auto'
+              alt="Gamebook creator interface preview"
+              width={600}
+              height={450}
+              className="relative -z-50 h-auto w-full max-w-2xl rounded-xl"
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
-          speed={0.4}
-          className="grid place-content-center text-white py-20"
-        >
-          <div className="text-center px-4 bg-black bg-opacity-50 py-6 rounded">
-            <h2 className="text-xl sm:text-4xl font-bold mb-6">Gamebook Creator</h2>
-            <p className="mb-4 sm:text-lg">
-              Stwórz interaktywne książki przygodowe, które angażują graczy w pełni
-              dynamiczne historie.
-            </p>
-            <div className='flex justify-center'>
-              <button
-                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                onClick={() => handleScrollToNext(2)}
-              >
-                <span>Twórz teraz</span>
-                <FaWandSparkles size={24} />
-              </button>
-            </div>
-          </div>
 
-          <ScrollIndicatorCentered onClick={() => handleScrollToNext(2)}/>
+        <ParallaxLayer offset={1} speed={0.4} className="relative">
+          {/* Instead of covering the entire background, wrap the text content in a subtle overlay */}
+          <div className="relative z-10 grid place-content-center h-full text-white py-20">
+            {/* Mobile Section */}
+            <div className="block md:hidden text-center px-4 py-6 rounded 
+                    bg-black bg-opacity-50 backdrop-blur-sm">
+              <h2 className="text-xl sm:text-4xl font-bold mb-6">Gamebook Creator</h2>
+              <p className="mb-4 sm:text-lg">
+                Za pomocą naszego kreatora gier paragrafowych stwórz interaktywne książki przygodowe, które angażują graczy w pełni dynamiczne historie.
+              </p>
+              <div className="flex justify-center">
+                <button
+                  className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                  onClick={() => handleScrollToNext(2)}
+                >
+                  <span>Twórz teraz</span>
+                  <FaWandSparkles size={24} />
+                </button>
+              </div>
+            </div>
+
+            {/* Desktop Section */}
+            <div className="hidden md:grid lg:grid-cols-2 gap-8 max-w-7xl px-4 items-center">
+              {/* Text content with a subtle background overlay */}
+              <div className="space-y-6 text-primary dark:text-white p-6 rounded 
+                     bg-black/20 xl:bg-transparent xl:backdrop-blur-none xl:bg-opacity-100 bg-opacity-20 backdrop-blur-sm">
+                <h2 className="text-4xl font-bold">
+                  <span className="text-accent">Twórz</span> Niezwykłe Historie
+                </h2>
+                <p className="text-lg leading-relaxed">
+                  Za pomocą naszego kreatora gier paragrafowych stwórz interaktywne książki przygodowe, które angażują graczy w pełni dynamiczne historie.
+                </p>
+                <ul className="space-y-3 text-primary dark:text-accent/90">
+                  <li className="flex items-center gap-2">
+                    <FaCheckCircle />
+                    Intuicyjny edytor wizualny
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaCheckCircle />
+                    Integracja multimediów
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaCheckCircle />
+                    Asystent AI wspomagający Twoją twórczość
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaCheckCircle />
+                    Tryb wieloosobowy dla wspólnej zabawy
+                  </li>
+                </ul>
+
+                <div className="flex justify-center pt-4">
+                  <button
+                    className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                    onClick={() => handleScrollToNext(2)}
+                  >
+                    <span>Twórz teraz</span>
+                    <FaWandSparkles size={24} />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <ScrollIndicatorCentered onClick={() => handleScrollToNext(2)} />
+          </div>
         </ParallaxLayer>
 
         {/* Mobile App Section */}
@@ -192,7 +245,7 @@ export default function Page() {
         <ParallaxLayer
           offset={2}
           speed={0.2}
-          className='relative'
+          className='relative hidden sm:block'
         >
           <div className="text-accent absolute bottom-1/4 right-1/4">
             <TbTopologyRing2 size={64} />
@@ -214,15 +267,15 @@ export default function Page() {
         <ParallaxLayer
           offset={2}
           speed={0.8}
-          className='relative hidden sm:block'
+          className='relative'
         >
-          <div className="text-accent absolute bottom-8 right-1/2">
+          <div className="text-accent absolute bottom-8 right-1/3">
             <TbTopologyComplex size={54} />
           </div>
           <div className="text-accent absolute top-4 left-4">
             <TbTopologyStarRing size={64} />
           </div>
-          <div className="text-accent absolute bottom-1/2 left-1/2">
+          <div className="text-accent absolute bottom-1/4 left-[10%]">
             <TbTopologyStarRing size={108} />
           </div>
           <div className="text-accent absolute bottom-1/4 right-10">
@@ -240,35 +293,57 @@ export default function Page() {
             alt=''
             width={400}
             height={300}
-            className='h-72 w-auto sm:w-[25vw] lg:w-[20vw] md:absolute md:top-1/3 lg:top-1/4 md:right-1/4 sm:h-auto animate-floating'
+            className='h-auto w-80 sm:w-96 md:left-16 md:top-1/4 lg:w-96 lg:left-[15%] sm:absolute sm:top-1/5 lg:top-[20%] sm:left-1/4 sm:h-auto animate-floating'
           />
         </ParallaxLayer>
-
 
         <ParallaxLayer
           offset={2}
           speed={0.3}
           className="text-white py-20 grid place-content-center"
         >
-          <div className="bg-black bg-opacity-50 px-4 py-6 rounded text-center">
-            <h2 className="text-xl sm:text-4xl font-bold mb-6">Aplikacja Mobilna</h2>
-            <p className="mb-4 sm:text-lg">
-              Zawsze miej swoje książki przygodowe pod ręką dzięki naszej aplikacji
-              mobilnej.
-            </p>
+          <div className='w-full'>
+            <div className="block md:grid md:grid-cols-[1fr_2fr] lg:grid-cols-2 gap-12 max-w-7xl md:px-4 items-center">
+              <div />
+              <div
+                className="space-y-2 lg:dark:text-white lg:text-primary text-white px-4 sm:px-6 py-6 rounded 
+                     bg-black/50 lg:bg-transparent lg:backdrop-blur-none xl:bg-opacity-100 bg-opacity-20 backdrop-blur-sm">
+                <h2 className="text-xl text-center sm:text-left lg:text-4xl sm:text-2xl font-bold">
+                  Twoja Przygoda w<span className="text-accent"> Każdej Kieszeni</span>
+                </h2>
+                <p className="text-lg sm:leading-relaxed">
+                  Zawsze miej swoje książki przygodowe pod ręką dzięki naszej aplikacji
+                  mobilnej
+                </p>
 
-            <div className='flex justify-center'>
-              <button
-                className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-orange-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                onClick={() => handleScrollToNext(3)}
-              >
-                <TbDownload className="text-white" size={20} />
-                <span>Pobierz aplikację</span>
-              </button>
+                <div className="hidden sm:grid grid-cols-2 gap-4">
+                  <div className="p-4 dark:bg-white/5 bg-white/15 rounded-xl">
+                    <TbDeviceMobile className="text-3xl text-accent mb-2" />
+                    <h3 className="font-semibold">Multiplatformowość</h3>
+                    <p className="text-sm opacity-75">iOS, Android, Web</p>
+                  </div>
+                  <div className="p-4 dark:bg-white/5 bg-white/15 rounded-xl">
+                    <TbCloud className="text-3xl text-accent mb-2" />
+                    <h3 className="font-semibold">Synchronizacja</h3>
+                    <p className="text-sm opacity-75">Dane zawsze aktualne</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center pt-4">
+                  <button
+                    className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                    onClick={() => handleScrollToNext(2)}
+                  >
+                    <TbDownload className="text-xl" />
+                    <span>Pobierz aplikację</span>
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <ScrollIndicatorCentered onClick={() => handleScrollToNext(3)}/>
+          <ScrollIndicatorCentered onClick={() => handleScrollToNext(3)} />
         </ParallaxLayer>
 
 
@@ -345,10 +420,10 @@ function ScrollIndicator({ onClick }: { onClick: () => void }) {
   );
 }
 
-function ScrollIndicatorCentered({onClick}: {onClick: () => void}) {
+function ScrollIndicatorCentered({ onClick }: { onClick: () => void }) {
   return (
     <div className='flex justify-center'>
-      <ScrollIndicator onClick={onClick}/>
+      <ScrollIndicator onClick={onClick} />
     </div>
 
   );
