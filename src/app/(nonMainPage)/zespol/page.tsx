@@ -14,7 +14,6 @@ export interface Member {
   linkedin: string | null;
 }
 
-// TODO: add real data
 const members: Member[] = [
   {
     firstName: "Agnieszka",
