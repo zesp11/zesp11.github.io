@@ -1,7 +1,3 @@
-import { remark } from 'remark';
-import gfm from 'remark-gfm';
-import html from 'remark-html';
-
 const directory = '/reports';
 const semesterDirectory = `${directory}/semester`;
 const semesterMainReport = {
