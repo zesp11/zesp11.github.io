@@ -2,13 +2,13 @@
 
 ## Wstęp
 
-Projekt **GoAdventure** to innowacyjne rozwiązanie, które łączy miłośników przygód i gier miejskich w jednym interaktywnym systemie. Naszym celem jest stworzenie aplikacji umożliwiającej graczom odkrywanie świata poprzez wspólne tworzenie i przeżywanie interaktywnych książek przygodowych (gamebooków). Gracze mogą tworzyć zespoły, podejmować decyzje w grze, a ich działania będą wymagały fizycznego przemieszczania się po mieście przy użyciu GPS.
+Projekt **GoTale** to innowacyjne rozwiązanie, które łączy miłośników przygód i gier miejskich w jednym interaktywnym systemie. Naszym celem jest stworzenie aplikacji umożliwiającej graczom odkrywanie świata poprzez wspólne tworzenie i przeżywanie interaktywnych książek przygodowych (gamebooków). Gracze mogą tworzyć zespoły, podejmować decyzje w grze, a ich działania będą wymagały fizycznego przemieszczania się po mieście przy użyciu GPS.
 
 Projekt opiera się na nowoczesnych technologiach, takich jak **Next.js** do budowy aplikacji webowej (Gamebook Creator), **Spring Boot** jako fundament backendu oraz **Flutter** do tworzenia aplikacji mobilnej (Gamebook Explorer). Dzięki współpracy członków zespołu, wszystkie elementy systemu są spójnie zintegrowane, zapewniając graczom wyjątkowe doświadczenia.
 
 ## Cel
 
-Głównym celem projektu **GoAdventure** jest stworzenie skalowalnego i intuicyjnego systemu, który łączy zespoły graczy poprzez wspólne poznawanie historii i eksplorację miast. Dzięki gamebookom użytkownicy mogą tworzyć własne interaktywne opowieści oraz przeżywać przygotowane historie w drużynach. Gra łączy narrację z elementami fizycznej eksploracji terenu, co pozwala na unikalne doświadczenia z wykorzystaniem GPS.
+Głównym celem projektu **GoTale** jest stworzenie skalowalnego i intuicyjnego systemu, który łączy zespoły graczy poprzez wspólne poznawanie historii i eksplorację miast. Dzięki gamebookom użytkownicy mogą tworzyć własne interaktywne opowieści oraz przeżywać przygotowane historie w drużynach. Gra łączy narrację z elementami fizycznej eksploracji terenu, co pozwala na unikalne doświadczenia z wykorzystaniem GPS.
 
 Gamebook Creator umożliwia tworzenie i edytowanie interaktywnych historii, określanie decyzji graczy, ich konsekwencji, a także lokalizacji, które gracze muszą odwiedzić w trakcie rozgrywki. Aplikacja mobilna Gamebook Explorer pozwala na odtwarzanie stworzonych historii w czasie rzeczywistym, umożliwiając zespołom dynamiczne podejmowanie decyzji i śledzenie ich postępów w grze.
 
@@ -70,4 +70,4 @@ Projekt składa się z trzech głównych komponentów:
 ---
 
 ## Podsumowanie
-Projekt **GoAdventure** oferuje wyjątkowe połączenie kreatywnej narracji, eksploracji miejskiej i współpracy zespołowej. Jego innowacyjność polega na integracji nowoczesnych technologii z fizycznym światem graczy, co czyni każdą przygodę niepowtarzalną. Dzięki Gamebook Creator twórcy mogą w łatwy sposób projektować złożone historie, a aplikacja mobilna Gamebook Explorer zapewnia graczom dynamiczne doświadczenia w terenie.
+Projekt **GoTale** oferuje wyjątkowe połączenie kreatywnej narracji, eksploracji miejskiej i współpracy zespołowej. Jego innowacyjność polega na integracji nowoczesnych technologii z fizycznym światem graczy, co czyni każdą przygodę niepowtarzalną. Dzięki Gamebook Creator twórcy mogą w łatwy sposób projektować złożone historie, a aplikacja mobilna Gamebook Explorer zapewnia graczom dynamiczne doświadczenia w terenie.
