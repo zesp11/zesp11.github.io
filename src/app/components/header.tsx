@@ -64,11 +64,11 @@ export default function Header() {
             alt="GoTale logo"
             width={36}
             height={36}
-            />
+          />
         </div>
         <div className="text-xl font-bold ml-2 hidden sm:block">
           Go<span className="text-accent">Tale</span>
-          </div>
+        </div>
       </Link>
 
       {/* Mobile menu */}
@@ -100,7 +100,7 @@ export default function Header() {
                 className={`
           font-semibold text-center border-gray-600 border-b px-3 py-1 my-1 rounded hover:bg-accent dark:text-primary hover:text-primary transition-colors duration-150
           ${pathname === l.url
-                    ? 'dark:text-card bg-foreground text-background'  // Selected item colors
+                    ? 'dark:text-card bg-foreground text-background dark:bg-slate-950'  // Selected item colors
                     : 'dark:foreground text-gray-800'}  // Default colors
         `}
                 onClick={() => setIsMenuOpen(false)}
