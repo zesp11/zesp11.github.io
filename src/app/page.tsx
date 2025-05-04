@@ -127,18 +127,18 @@ export default function Page() {
         <ParallaxLayer
           offset={1}
           speed={0.8}
-          className="relative flex justify-end items-center pr-8"
+          className="relative flex justify-end items-center pr-8 place-content-center 
+            bg-[linear-gradient(-11deg,hsl(var(--background))_28%,#9C8B73_50%,#9C8B73_50%,hsl(var(--background))_67%)]
+            dark:bg-[linear-gradient(-11deg,hsl(var(--background))_28%,#21262d_50%,#21262d_50%,hsl(var(--background))_67%)]
+          "
         >
           <div className="lg:absolute lg:right-36 lg:ml-16 relative">
-            {/* Centered accent background glow */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-accent/10 blur-3xl rounded-full scale-125 origin-center" />
-
             <Image
-              src={'creator-usage.webp'}
+              src={'creator.png'}
               alt="Gamebook creator interface preview"
               width={600}
               height={450}
-              className="relative -z-50 h-auto w-full max-w-2xl rounded-xl"
+              className="relative -z-50 h-auto w-full max-w-4xl rounded-xl"
             />
           </div>
         </ParallaxLayer>
