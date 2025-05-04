@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
@@ -54,11 +55,20 @@ export default function Header() {
   return (
     <header className={`z-50 shadow text-background bg-foreground dark:text-primary dark:bg-card flex justify-between items-center p-1 sm:p-4 w-screen transform transition-transform duration-200 fixed ${isHeaderVisible ? "translate-y-0" : '-translate-y-full'}`}>
       <Link
-        className="p-1 flex gap-1"
+        className="p-1 flex gap-1 align-center items-center"
         href={"/"}
       >
-        <div className="aspect-square h-6 bg-background dark:bg-primary rotate-[15deg]"></div>
-        <div className="text-xl font-bold ml-2 hidden sm:block">GoTale</div>
+        <div className="aspect-square h-8 grid place-content-center">
+          <Image
+            src="logo.svg"
+            alt="GoTale logo"
+            width={36}
+            height={36}
+            />
+        </div>
+        <div className="text-xl font-bold ml-2 hidden sm:block">
+          Go<span className="text-accent">Tale</span>
+          </div>
       </Link>
 
       {/* Mobile menu */}
