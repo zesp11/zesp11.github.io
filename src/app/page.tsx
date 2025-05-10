@@ -10,6 +10,7 @@ import { Montserrat } from "next/font/google";
 import Link from 'next/link';
 import { FaCheckCircle, FaChevronDown, FaCompass, FaFeatherAlt } from 'react-icons/fa';
 import { FaWandSparkles } from "react-icons/fa6";
+import { useTheme } from 'next-themes';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -19,6 +20,7 @@ const montserrat = Montserrat({
 
 export default function Page() {
   const parallaxRef = useRef<IParallax | null>(null);
+  const { theme } = useTheme()
 
   const handleScrollToNext = (pageIndex: number) => {
     if (parallaxRef.current) {
@@ -346,22 +348,22 @@ export default function Page() {
 
         {/* Final Section */}
         <ParallaxLayer
-          offset={2.95}
+          offset={2.96}
           speed={0.3}
           factor={2.5}
-          className='relative flex justify-end md:block items-center pr-8'
+          className='relative flex justify-start sm:justify-end md:block items-center pr-8'
         >
           <Image
-            src={"sun.png"}
+            src={theme === 'dark' ? 'moon.png' : "sun.png"}
             alt=''
             width={400}
             height={300}
-            className='h-auto w-36 md:left-16 md:top-1/4 lg:left-[15%] sm:absolute sm:top-1/5 lg:top-[20%] sm:left-1/4 sm:h-auto animate-floating'
+            className='h-auto left-8 w-32 sm:w-36 top-1/4 md:top-1/4 lg:w-56 md:left-[15%] lg:left-[28%] absolute lg:top-[20%] sm:left-8 sm:h-auto animate-floating'
           />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.25}
+          offset={3.26}
           speed={1}
           className='relative flex justify-end md:block items-center pr-8'
         >
@@ -377,15 +379,14 @@ export default function Page() {
         <ParallaxLayer
           offset={2.98}
           speed={0.25}
-          // factor={2.5}
-          className='relative flex justify-end items-center pr-8'
+          className='relative flex justify-end items-center pr-4 sm:pr-8'
         >
           <Image
             src={"cloud2.png"}
             alt=''
             width={400}
             height={300}
-            className='right-4 animate-floating'
+            className='w-44 md:w-52 lg:w-1/4 sm:w-auto sm:right-4 animate-floating'
           />
         </ParallaxLayer>
 
@@ -399,7 +400,7 @@ export default function Page() {
           }}
         />
         <ParallaxLayer
-          offset={3}
+          offset={3.25}
           speed={0.2}
           className='flex justify-between flex-col'
         >
