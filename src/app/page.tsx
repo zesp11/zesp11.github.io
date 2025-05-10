@@ -329,13 +329,14 @@ export default function Page() {
                 </div>
 
                 <div className="flex justify-center pt-4">
-                  <button
+                  <a
+                    href="/gotale.apk"
+                    download
                     className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                    onClick={() => handleScrollToNext(2)}
                   >
                     <TbDownload className="text-xl" />
                     <span>Pobierz aplikację</span>
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -402,12 +403,12 @@ export default function Page() {
         <ParallaxLayer
           offset={3.25}
           speed={0.2}
-          className='flex justify-between flex-col'
+          className='flex justify-between flex-col relative z-10'
         >
           <div
             className="grid place-content-center py-20"
           >
-            <div className="text-center px-4 text-white bg-black bg-opacity-50 py-6 rounded">
+            <div className="text-center px-4 text-white bg-black/50 backdrop-blur-sm py-6 rounded">
               <h2 className="text-xl font-bold mb-6 sm:text-4xl">Gotowy do działania?</h2>
               <p className="mb-8 sm:text-lg">
                 Dołącz do nas i stwórz swoje interaktywne książki przygodowe!
