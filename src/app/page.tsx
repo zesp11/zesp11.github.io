@@ -156,13 +156,13 @@ export default function Page() {
                 Za pomocą naszego kreatora gier paragrafowych stwórz interaktywne książki przygodowe, które angażują graczy w pełni dynamiczne historie.
               </p>
               <div className="flex justify-center">
-                <button
+                <a
                   className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                  onClick={() => handleScrollToNext(2)}
+                  href='https://zesp11.netlify.app'
                 >
                   <span>Twórz teraz</span>
                   <FaWandSparkles size={24} />
-                </button>
+                </a>
               </div>
             </div>
 
@@ -197,13 +197,13 @@ export default function Page() {
                 </ul>
 
                 <div className="flex justify-center pt-4">
-                  <button
+                  <a
                     className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                    onClick={() => handleScrollToNext(2)}
+                    href="https://zesp11.netlify.app"
                   >
                     <span>Twórz teraz</span>
                     <FaWandSparkles size={24} />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
