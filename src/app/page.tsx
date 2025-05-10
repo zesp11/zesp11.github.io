@@ -346,23 +346,49 @@ export default function Page() {
 
         {/* Final Section */}
         <ParallaxLayer
-          offset={3}
-          speed={0.1}
-          style={{
-            backgroundImage: "url('logos.png')",
-            backgroundSize: "cover",
-            backgroundPosition: 'center',
-          }}
-        />
+          offset={2.95}
+          speed={0.3}
+          factor={2.5}
+          className='relative flex justify-end md:block items-center pr-8'
+        >
+          <Image
+            src={"sun.png"}
+            alt=''
+            width={400}
+            height={300}
+            className='h-auto w-36 md:left-16 md:top-1/4 lg:left-[15%] sm:absolute sm:top-1/5 lg:top-[20%] sm:left-1/4 sm:h-auto animate-floating'
+          />
+        </ParallaxLayer>
+
         <ParallaxLayer
-          offset={3}
-          speed={0.9}
-          style={{
-            backgroundImage: "url('clouds.png')",
-            backgroundSize: "cover",
-            backgroundPosition: 'center',
-          }}
-        />
+          offset={3.25}
+          speed={1}
+          className='relative flex justify-end md:block items-center pr-8'
+        >
+          <Image
+            src={"cloud1.png"}
+            alt=''
+            width={400}
+            height={300}
+            className='left-4'
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2.98}
+          speed={0.25}
+          // factor={2.5}
+          className='relative flex justify-end items-center pr-8'
+        >
+          <Image
+            src={"cloud2.png"}
+            alt=''
+            width={400}
+            height={300}
+            className='right-4 animate-floating'
+          />
+        </ParallaxLayer>
+
         <ParallaxLayer
           offset={3}
           speed={1.3}
