@@ -13,7 +13,7 @@ export default function Footer() {
             </Link>
 
             {/* GitHub Link */}
-            <a href="https://github.com/Serp-ent/zesp11" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/zesp11" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} className="transition-colors hover:text-accent" />
             </a>
           </div>

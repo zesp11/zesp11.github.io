@@ -424,9 +424,18 @@ export default function Page() {
               </div>
             </div>
           </div>
-
-          <Footer />
         </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.2}
+          className='relative'
+        >
+          <div className='absolute bottom-0 w-full'>
+            <Footer />
+          </div>
+        </ParallaxLayer>
+
       </Parallax>
     </main >
   );
