@@ -72,7 +72,7 @@ export default function Page() {
                 alt='Team collaboration illustration'
                 width={800}
                 height={600}
-                className='h-auto w-full lg:min-w-max animate-floating drop-shadow-2xl'
+                className='h-auto w-full lg:min-w-96 animate-floating drop-shadow-2xl'
               />
             </div>
           </div>
