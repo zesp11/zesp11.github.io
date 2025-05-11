@@ -430,12 +430,12 @@ export default function Page() {
           }}
         />
         <ParallaxLayer
-          offset={3.25}
+          offset={3}
           speed={0.2}
-          className='flex justify-between flex-col relative z-10'
+          className='flex justify-between flex-col relative z-20'
         >
           <div
-            className="grid place-content-center py-20"
+            className="grid place-content-center h-full py-20"
           >
             <div className="text-center px-4 text-white bg-black/50 backdrop-blur-sm py-6 rounded">
               <h2 className="text-xl font-bold mb-6 sm:text-4xl">Gotowy do działania?</h2>
@@ -454,17 +454,12 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={3}
-          speed={0.2}
-          className='relative'
-        >
           <div className='absolute bottom-0 w-full'>
             <Footer />
           </div>
         </ParallaxLayer>
+
 
       </Parallax>
     </main >
