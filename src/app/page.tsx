@@ -367,7 +367,7 @@ export default function Page() {
         <ParallaxLayer
           offset={3.26}
           speed={1}
-          className='relative flex justify-end md:block items-center pr-8'
+          className='relative hidden justify-end md:block items-center pr-8'
         >
           <Image
             src={"cloud1.png"}
@@ -388,15 +388,43 @@ export default function Page() {
             alt=''
             width={400}
             height={300}
-            className='w-44 md:w-52 lg:w-1/4 sm:w-auto sm:right-4 animate-floating'
+            className='w-52 lg:w-1/4 sm:w-auto sm:right-4 animate-floating'
           />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={3}
-          speed={1.3}
+          speed={0.3}
           style={{
-            backgroundImage: "url('hero.png')",
+            backgroundImage: "url('roofs_and_clouds.png')",
+            backgroundSize: "cover",
+            backgroundPosition: 'center',
+          }}
+        />
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.6}
+          style={{
+            backgroundImage: "url('city_background.png')",
+            backgroundSize: "cover",
+            backgroundPosition: 'center',
+          }}
+        />
+        <ParallaxLayer
+          offset={3}
+          speed={1}
+          style={{
+            backgroundImage: "url('city_foreground.png')",
+            backgroundSize: "cover",
+            backgroundPosition: 'center',
+          }}
+        />
+        <ParallaxLayer
+          offset={3}
+          speed={2}
+          style={{
+            backgroundImage: "url('waves.png')",
             backgroundSize: "cover",
             backgroundPosition: 'center',
           }}
