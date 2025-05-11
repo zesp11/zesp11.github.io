@@ -61,11 +61,12 @@ export default function Page() {
         <ParallaxLayer
           offset={0}
           speed={0.2}
-          className='relative grid place-content-center'
+          className='relative grid pt-24 place-content-start sm:place-content-center sm:p-0'
         >
-          <div className='relative w-full max-w-2xl mx-auto'>
+          <div className='relative w-full max-w-4xl mx-auto'>
             {/* Blurred background */}
-            <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full -translate-y-1/3 scale-125" />
+            {/* <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full -translate-y-1/3 scale-125" /> */}
+            <div className="w-screen left-1/2 -translate-x-1/2 absolute inset-0 blur-3xl rounded-full bg-accent/20  max-w-3xl sm:-translate-y-8 aspect-square" />
 
             {/* Image container */}
             <div className='relative z-10 grid place-content-center'>
@@ -74,7 +75,7 @@ export default function Page() {
                 alt='Team collaboration illustration'
                 width={800}
                 height={600}
-                className='h-auto w-full lg:min-w-96 animate-floating drop-shadow-2xl'
+                className='h-auto w-full max-w-3xl lg:min-w-96 animate-floating drop-shadow-2xl'
               />
             </div>
           </div>
@@ -129,12 +130,12 @@ export default function Page() {
         <ParallaxLayer
           offset={1}
           speed={0.8}
-          className="relative flex justify-end items-center pr-8 place-content-center 
+          className="relative flex justify-end items-center sm:pr-8 place-content-center 
             bg-[linear-gradient(-11deg,hsl(var(--background))_28%,#9C8B73_50%,#9C8B73_50%,hsl(var(--background))_67%)]
             dark:bg-[linear-gradient(-11deg,hsl(var(--background))_28%,#21262d_50%,#21262d_50%,hsl(var(--background))_67%)]
           "
         >
-          <div className="lg:absolute lg:right-36 lg:ml-16 relative">
+          <div className="scale-[1.6] sm:scale-100 lg:absolute lg:right-36 lg:ml-16 relative">
             <Image
               src={'creator.png'}
               alt="Gamebook creator interface preview"
