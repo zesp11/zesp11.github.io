@@ -319,8 +319,8 @@ export default function Page() {
                 <div className="hidden sm:grid grid-cols-2 gap-4">
                   <div className="p-4 dark:bg-white/5 bg-white/15 rounded-xl">
                     <TbDeviceMobile className="text-3xl text-accent mb-2" />
-                    <h3 className="font-semibold">Multiplatformowość</h3>
-                    <p className="text-sm opacity-75">iOS, Android, Web</p>
+                    <h3 className="font-semibold">Mobilność</h3>
+                    <p className="text-sm opacity-75">urządzenia z systemem Android</p>
                   </div>
                   <div className="p-4 dark:bg-white/5 bg-white/15 rounded-xl">
                     <TbCloud className="text-3xl text-accent mb-2" />
@@ -331,7 +331,7 @@ export default function Page() {
 
                 <div className="flex justify-center pt-4">
                   <a
-                    href="/gotale.apk"
+                    // href="/gotale.apk"
                     download
                     className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
                   >
