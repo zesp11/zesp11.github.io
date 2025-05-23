@@ -330,14 +330,34 @@ export default function Page() {
                 </div>
 
                 <div className="flex justify-center pt-4">
-                  <a
-                    // href="/gotale.apk"
-                    download
-                    className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <TbDownload className="text-xl" />
-                    <span>Pobierz aplikację</span>
-                  </a>
+                  <div className="relative group">
+                    <a
+                      href="/gotale.apk"
+                      download
+                      className="sm:text-lg px-3 py-2 sm:px-6 sm:py-3 bg-accent hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 flex items-center justify-center space-x-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const notification = document.getElementById('apk-notification');
+                        if (notification) {
+                          notification.classList.remove('opacity-0');
+                          notification.classList.add('opacity-100');
+                          setTimeout(() => {
+                            notification.classList.remove('opacity-100');
+                            notification.classList.add('opacity-0');
+                          }, 3000);
+                        }
+                      }}
+                    >
+                      <TbDownload className="text-xl" />
+                      <span>Pobierz aplikację</span>
+                    </a>
+                    <div
+                      id="apk-notification"
+                      className="fixed bottom-4 right-4 bg-black/80 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 z-50 pointer-events-none"
+                    >
+                      Aplikacja nie jest publicznie dostępna
+                    </div>
+                  </div>
                 </div>
               </div>
 
