@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const directory = '/reports';
 const semesterDirectory = `${directory}/semester`;
 const semesterMainReport = {
@@ -88,6 +90,20 @@ export default function Page() {
               </ul>
             </div>
           )}
+        </section>
+
+        {/* API Documentation */}
+        <section className='pl-4 mt-8'>
+          <h3 className='text-xl font-semibold mb-4'>
+            Dokumentacja API:
+          </h3>
+          <Link
+            href="https://documenter.getpostman.com/view/36993515/2sAYdhKqiV"
+            target='_blank'
+            className='text-accent hover:underline block'
+          >
+            Dokumentacja API w Postman
+          </Link>
         </section>
       </div>
     </div>
