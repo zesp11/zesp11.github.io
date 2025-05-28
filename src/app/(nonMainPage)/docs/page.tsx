@@ -92,6 +92,42 @@ export default function Page() {
           )}
         </section>
 
+        {/* Project Documentation */}
+        <section className='pl-4 mt-8'>
+          <h3 className='text-xl font-semibold mb-4'>
+            Dokumentacja projektowa:
+          </h3>
+          <ul className='list-none'>
+            <li className='relative pl-6 before:absolute before:left-0 before:top-[0.3em] before:text-accent before:content-["▹"] before:mr-2 before:leading-none mt-2'>
+              <Link
+                href="/zesp11_opis.pdf"
+                target='_blank'
+                className='text-accent hover:underline'
+              >
+                Opis projektu
+              </Link>
+            </li>
+            <li className='relative pl-6 before:absolute before:left-0 before:top-[0.3em] before:text-accent before:content-["▹"] before:mr-2 before:leading-none mt-2'>
+              <Link
+                href="/zesp11_specyfikacja_funkcjonalna.pdf"
+                target='_blank'
+                className='text-accent hover:underline'
+              >
+                Specyfikacja funkcjonalna
+              </Link>
+            </li>
+            <li className='relative pl-6 before:absolute before:left-0 before:top-[0.3em] before:text-accent before:content-["▹"] before:mr-2 before:leading-none mt-2'>
+              <Link
+                href="/zesp11_zestawienie_spotkan.pdf"
+                target='_blank'
+                className='text-accent hover:underline'
+              >
+                Zestawienie spotkań
+              </Link>
+            </li>
+          </ul>
+        </section>
+
         {/* API Documentation */}
         <section className='pl-4 mt-8'>
           <h3 className='text-xl font-semibold mb-4'>
@@ -105,6 +141,7 @@ export default function Page() {
             Dokumentacja API w Postman
           </Link>
         </section>
+
       </div>
     </div>
   );
