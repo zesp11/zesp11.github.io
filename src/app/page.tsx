@@ -87,7 +87,7 @@ export default function Page() {
         >
           <div className="backdrop-blur-sm bg-black bg-opacity-60 py-4 sm:px-6 sm:py-8 text-center rounded space-y-4">
             <h1 className="text-white text-xl text-nowrap sm:text-4xl font-bold">
-              Witamy na stronie <span className="text-accent">Zespołu XI</span>
+              Witamy na stronie <span className="text-accent">Zespołu 11</span>
             </h1>
             <p className="text-gray-100 sm:text-lg max-w-lg mx-auto px-2">
               Nasz projekt ułatwia integrację w zespole dzięki wspólnemu odkrywaniu opowieści, poznawaniu nowych miejsc i budowie świata na podstawie podejmowanych decyzji.

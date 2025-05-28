@@ -1,4 +1,4 @@
-# Zespol XI - Projekt Zespołu 11 (2024/25)
+# Projekt Zespołu 11 (2024/25)
 
  Strona **Zespołu XI** z **Programowania Zespołowego 2024/25** na **Wydziale Matematyki i Informatyki**.
 

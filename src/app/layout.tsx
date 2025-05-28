@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Zespol XI",
+  title: "Zespol 11",
   description: "Strona dla programowania zespolowego 2024/25",
 };
 
