@@ -1,6 +1,6 @@
 # Projekt Zespołu 11 (2024/25)
 
- Strona **Zespołu XI** z **Programowania Zespołowego 2024/25** na **Wydziale Matematyki i Informatyki**.
+Strona **Zespołu XI** z **Programowania Zespołowego 2024/25** na **Wydziale Matematyki i Informatyki**.
 
 ## Przegląd projektu
 
@@ -8,6 +8,28 @@ Strona projektu jest stworzona w **Next.js 15** z użyciem **TypeScript**, jest 
 
 ## Technologie
 
-- **Next.js 15** do generowania statycznej strony
-- **TypeScript** do zapewnienia bezpieczeństwa typów
-- **Markdown** do tworzenia dokumentacji projektu i harmonogramu
+- **Next.js 15**
+- **TypeScript**
+- **Markdown**
+
+## Instalacja
+
+> [!NOTE]  
+> Strona zespołu była pisana podczas wyjścia Next.js 15 - stąd błędy przy zależnościach
+
+```bash
+npm install --legacy-peer-deps
+```
+
+## Uruchomienie aplikacji
+
+```bash
+npm run dev
+```
+
+## Deploy aplikacji
+
+```bash
+npm run build
+npm run deploy
+```
